@@ -1,0 +1,24 @@
+.front_page {
+  display: flex;
+  justify-content: center;
+  /* background-color: green; */
+}
+
+.front_page > section {
+  min-height: 100vh;
+  padding: 120px 20px 0;
+  /* background-color: yellow; */
+}
+
+.front_page_right h2 {
+  font-weight: 500;
+  font-size: 42px;
+  margin: 30px 0 20px;
+  color: var(--blue);
+}
+
+.logo_letter{
+    font-size: 64px;
+    font-weight: 900;
+    padding: 24px 0;
+}

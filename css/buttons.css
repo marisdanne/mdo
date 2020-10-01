@@ -1,0 +1,32 @@
+.button {
+  display: block;
+  cursor: pointer;
+  padding: 4px 12px;
+  background: var(--neutral-500);
+  border: 1px solid var(--neutral-900);
+  border-radius: 10px;
+  color: var(--neutral-0);
+  font-size: 20px;
+}
+
+.button:hover {
+  color: var(--blue-dark);
+  border-color: var(--blue-dark);
+}
+
+.button.button_primary {
+  background: var(--blue);
+  color: var(--neutral-0);
+  border-color: transparent;
+}
+
+.button.button_primary:hover { background: var(--blue-dark); }
+
+
+
+.buttons {
+  display: inline-flex;
+  align-items: center;
+}
+
+.buttons .button:not(:first-of-type) { margin-left: 16px;}
