@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Tabula</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+      <link rel="stylesheet"  href="noform.css">
+    <link rel="stylesheet"   href="zimulis.css">
+    <link rel="stylesheet"  href="klase.css">
+       
+  </head>
+<body>
+  
+  <header>
+    <a href="/" class="logo">
+      <img src="images/rlogo.png" alt=" MDP logo">
+    </a>
+    <div class="header-right">
+      <p>Anna Kalniņa</p>
+      <a href="/">Skolotājs</a>
+    </div>
+  </header>
+  
+  <div class="content">
+    <div class="dropdown">
+      <button class="dropbtn">Klase</button>
+      <div class="dropdown-content" >
+        <a href="#">12.</a>
+        <a href="#">11.</a>
+        <a href="#">10.</a>
+      </div>
+      <button class="dropbtn">Temats</button>
+      <div class="dropdown-content">
+        <a href="#">Izklājlapas funkciju grafiku konstruēšana.</a>
+        <a href="#">Nolasīt un attēlot datus dažādās diagrammās</a>
+        <a href="#">Aprēķinu tabulu veidošana</a>
+      </div>
+    </div>
+       
+    <table class="noform" >
+      <thead >
+          <tr>
+              <th width="20%">Skolēna vārds, uzvārds</th>
+              <th wid="10%">Snieguma līmenis (%)</th>
+              <th width="20%">Pašvērtējums</th>
+              <th width="10%"> Uzlabotais snieguma līmenis (%)</th>
+              <th width="20%">Pašvērtējums</th>
+              <th width="20%">Skolotāja vērtējums</th>
+          </tr>
+      </thead>
+
+      <tbody>
+        <tr class= "Skolēna vārds, uzvārds">
+            <td>Jānis Bērziņš</td>
+            <td align="center">60</td>
+            <td>Varēju labāk, pietrūka gribasspēka</td>
+            <td></td>
+            <td></td>
+            <td > 
+              <form align="center">
+                 <input type="number" id="fname" name="fname"> % <img src="images/zimulis2.png" alt ="zimulis" width="8%" height="8%" > 
+              </form>
+            </td>
+        </tr>
+        <tr class= "Skolēna vārds, uzvārds">
+          <td>Ilva Lapiņa</td>
+          <td align="center" >30</td>
+          <td>Šo mācību vielu nesaprotu nepieciešanas konsultācijas</td>
+          <td align="center">70</td>
+          <td>Mēģināju mājās saprast, neskaidro noskaidroju konsultācijās. Vērtējums un zināšanas uzlabojās</td>
+          <td > 
+            <form align="center">
+               <input type="number" id="fname" name="fname"> % <img src="images/zimulis2.png" alt ="zimulis" width="8%" height="8%" > 
+            </form>
+          </td>
+      </tr>
+    </tbody>
+</table>
+</div>
+
+<footer>
+  <p></p>
+  <a href="/"  class="button">Saglabāt</a>
+ </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+.noform{
+    width: calc(100% - 128px);
+    margin-left: auto;
+    margin-right: auto;
+    margin-block-start: 60px;
+    border-collapse: separate;
+    border-spacing: 0 10px;
+}
+.noform tr {
+    height: 32px;
+   line-height: 32px;
+}
+.noform thead tr {
+    height: 24px;
+    line-height: 24px;
+    background-color: #001B36;
+    color: white;
+}
+.noform th {
+    font-size: 16px;
+    font-weight: 300;
+}
+.noform td,
+.noform th {
+    padding: 12px 10px;
+}
+.noform tr td:first-child,
+.noform tr th:first-child {
+    text-align: center;
+}
+.noform tbody td {
+    font-size: 16px;
+    font-weight: 300;
+    color: #001B36;
+}
+.noform tbody tr td:nth-child(2) {
+    font-weight: 500;
+}
+.noform tr {
+    box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.05);
+}
