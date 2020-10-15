@@ -5,12 +5,12 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/main.css">
-      <link rel="stylesheet"  href="noform.css">
-        <link rel="stylesheet"  href="klase.css">
-       
+    <link rel="stylesheet"  href="noform.css">
+    <link rel="stylesheet"  href="klase.css">
+    <script src="script/skolens_tabula.css"></script>
   </head>
 <body>
-  
+
   <header>
     <a href="/" class="logo">
       <img src="images/rlogo.png" alt=" MDP logo">
@@ -20,7 +20,7 @@
       <a href="/">Skolēns</a>
     </div>
   </header>
-  
+
   <div class="content">
     <div class="dropdown">
       <button class="dropbtn">Klase</button>
@@ -29,9 +29,9 @@
         <a href="#">11.</a>
         <a href="#">10.</a>
       </div>
-      
+
     </div>
-       
+
     <table class="noform" >
       <thead >
           <tr>
@@ -40,7 +40,7 @@
               <th id="2" width="20%"><p><h3>2</p> <p>Spēja rīkoties ar nelielu palīdzību</p></h3></th>
               <th id="3" width="20%"> <p><h3>3</p> <p> Spēja rīkoties patstāvīgi</p></h3></th>
               <th id="4" width="20%"> <p><h3>4</p> <p>Prognozē rezultātu, spēja skaidrot rīcības</p></h3> </th>
-             
+
           </tr>
       </thead>
 
@@ -69,23 +69,6 @@
          </tr>
     </tbody>
 </table>
-<script>
-  var table =document.getElementById("tabula"), rIndex, cIndex;
-  for (var i=1; i<table.rows.length;i++){
-      for (var j=0; j<table.rows[i].cells.length;j++){
-      table.rows[i].cells[j].onclick=function(){
-          cell=this.cellIndex+1;
-          document.getElementById("1").value=this.cells[cell].innerHTML;
-          document.getElementById("2").value=this.cells[cell].innerHTML;
-          document.getElementById("3").value=this.cells[cell].innerHTML;
-          document.getElementById("4").value=this.cells[cell].innerHTML;
-      }  ;  
-      }
-  }
-  
-  
-  
-     </script>
 </div>
 <h3>Tavs snieguma līmenis ______ punkti  ________ %</h3>
       <p>Es uzskatu, ka mans snieguma līmenis ir atbilstošs manām zināšanām, protams, ka es varu labāk.</p>
