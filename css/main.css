@@ -1,6 +1,7 @@
 @import url("header.css");
 @import url("footer.css");
 @import url("buttons.css");
+@import url("login_izvelne.css");
 
 :root {
   /* Neutral */
@@ -30,6 +31,10 @@
 
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+}
+
+.content {
+  padding-top: 50px;
 }
 
 img {
