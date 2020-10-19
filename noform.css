@@ -2,7 +2,7 @@
     width: calc(100% - 128px);
     margin-left: auto;
     margin-right: auto;
-    margin-block-start: 60px;
+    
     border-collapse: separate;
     border-spacing: 0 10px;
 }
