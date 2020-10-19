@@ -62,6 +62,9 @@ table .font-weight tr td{
 }
 .overflow-y{
   overflow-y: auto;
-  height: 65vh;
+  height: 75vh;
 }
 
+.d-flex{
+	display: flex;
+}
