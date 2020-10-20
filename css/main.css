@@ -68,3 +68,6 @@ table .font-weight tr td{
 .d-flex{
 	display: flex;
 }
+.padding-right {
+  padding-right: 40px;
+}
