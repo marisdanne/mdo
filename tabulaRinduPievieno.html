@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Tabula</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+      <link rel="stylesheet"  href="noform.css">
+      <link rel="stylesheet"  href="klase.css">
+ 
+     
+
+  </head>
+<body>
+
+  
+
+  
+
+    <table id="snieguma_limenu_tabula" >
+      <thead >
+          <tr>
+              <th width="20%">Kritērijs</th>
+              <th wid="20%"><p>1</p> <p>Gatava instrukcija</p></th>
+              <th width="20%"><p>2</p> <p>Spēja rīkoties ar nelielu palīdzību</p></th>
+              <th width="20%"> <p>3</p> <p> Spēja rīkoties patstāvīgi</p></th>
+              <th width="20%"> <p>4</p> <p>Prognozē rezultātu, spēja skaidrot rīcības</p> </th>
+              <th> </th>
+
+          </tr>
+      </thead>
+
+      <tbody>
+        <tr class="kriteriji">
+          <td onclick="this.bgColor='red'">Kritērijs</td>
+          <td >Viens</td>
+          <td>Divi</td>
+          <td>Trīs</td>
+          <td>Četri</td>
+          <td>
+            <button onclick="dzestKriteriju()">Dzēst</button> 
+            <button onclick="LabotKriteriju()">Labot</button> </td>
+         
+          </tr>
+       <td>
+        <tr id="kriteriji">
+            <td><input type="text" id="nulle"  ></td>
+            <td ><input type="text" id="viens" ></td>
+            <td><input type="text" id="divi" ></td>
+            <td><input type="text" id="tris" ></td>
+            <td><input type="text" id="cetri" ></td>
+         <td>
+            <button onclick="dzestKriteriju()">Dzēst</button> 
+            <button onclick="LabotKriteriju()">Labot</button> </td>
+         
+          </tr>
+         
+    </tbody>
+</table>
+
+<br>
+<button type="button" onclick="kriterijs()">Pievieno jaunu kritēriju</button>
+<script src='kriterijs.js'></script>
+<script src='dzestKriteriju.js'></script>
+<script src='labotKriteriju.js'></script>
+
+  
+</body>
+
+</html>
