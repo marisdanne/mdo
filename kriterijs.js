@@ -18,5 +18,6 @@ rindina.innerHTML=`<td> <input type="text"   ></td>
 //    }
    
 var cedit = rindina.insertCell (-1);
-cedit.innerHTML = '<input type="button" id="ok" value="Labot" onclick=""><input type="button" id="del" value="Dzēst" onclick="DelRow(this)"> ';
+cedit.innerHTML = `<button onclick="dzestKriteriju(this)">Dzēst</button> 
+<button onclick="LabotKriteriju()">Labot</button> </td>`;
 }
