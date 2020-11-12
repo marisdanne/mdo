@@ -32,7 +32,7 @@
 
     </div>
 
-    <table class="snieguma_limenu_tabula" >
+    <table id="snieguma_limenu_tabula" >
       <thead >
           <tr>
               <th width="20%">Kritērijs</th>
@@ -40,33 +40,58 @@
               <th width="20%"><p>2</p> <p>Spēja rīkoties ar nelielu palīdzību</p></th>
               <th width="20%"> <p>3</p> <p> Spēja rīkoties patstāvīgi</p></th>
               <th width="20%"> <p>4</p> <p>Prognozē rezultātu, spēja skaidrot rīcības</p> </th>
-
+              <th></th>
           </tr>
       </thead>
 
       <tbody>
-        <tr class= "Kritērijs">
+         <tr id= "kriteriji">
             <td>Varu sniegt atgriezenisko saiti citiem</td>
             <td >Es protu strādāt pēc parauga</td>
             <td>Es protu novērtēt cita skolēna darbu</td>
             <td>Es protu novērtēt cita skolēna darbu ņemot vērā viņa izvirzīto mācību mērķi</td>
             <td>Es protu novērtēt cita skolēna darbu, ņemot vērā viņa izvirzīto mācību mērķi, un ieteikt, kā rīkoties tālāk.</td>
-         </tr>
-         <tr class= "Kritērijs">
+            <td>
+              <button onclick="dzestKriteriju(this)">Dzēst</button> 
+              <button onclick="LabotKriteriju()">Labot</button> 
+            </td>  
+           
+          </tr>
+          
+         <tr id= "kriteriji">
             <td>Vērtību tabulas izveide</td>
             <td >Veidojot vērtību tabulu balstos uz iepriekšējiem piemēriem vai lietoju gatavu instrukciju, palīdzību</td>
             <td>Veidojot vērtību tabulu, lietoju dotās argumenta vērtības vai izvēlos tās intuitīvi</td>
             <td>Argumenta vērtības izvēlos apzināti-spēju novērtēt, vai izvēlētās un aprēķinātās vērtības ir vispiemērotākās</td>
             <td>Vērtību tabulu veidoju un pielāgoju kā kompleksa uzdevuma (reāla dzīves situācijas apraksta) sastāvdaļu.
             </td>
-         </tr>
-         <tr class= "Kritērijs">
+            <td>
+              <button onclick="dzestKriteriju(this)">Dzēst</button> 
+              <button onclick="LabotKriteriju()">Labot</button> 
+            </td>  
+          </tr>
+          <tr id= "kriteriji">
             <td>Novērtē un uzlabo rezultātu</td>
             <td >Veidojot funkciju grafiku lietoju noklusētos iestatījumus.Iegūto rezultātu nevērtēju, neuzlaboju.</td>
             <td>Konstruēto funkcijas grafiku to uzlaboju, uzklausot citu ieteikumus un norādījumus.</td>
             <td>Patstāvīgi pielāgoju datu vērtības tabulā un maina to attēlošanas formatējumu, lai funkcijas grafiks attēlotu nepieciešamo informāciju, attēlojot būtiskākos funkcijas parametrus un īpašības</td>
             <td>Patstāvīgi, atbilstoši dažādiem  uzdevuma kontekstiem, pielāgoju datus un mainu to attēlošanas formatējumu, lai funkcijas grafiks attēlotu tikai nepieciešamo informāciju, attēlojot būtiskākos funkcijas parametrus un īpašības</td>
-         </tr>
+            <td>
+              <button onclick="dzestKriteriju(this)">Dzēst</button> 
+              <button onclick="LabotKriteriju()">Labot</button> 
+            </td>  
+           </tr>
+           <tr id="kriteriji">
+            <td><input type="text" id="nulle"  ></td>
+            <td ><input type="text" id="viens" ></td>
+            <td><input type="text" id="divi" ></td>
+            <td><input type="text" id="tris" ></td>
+            <td><input type="text" id="cetri" ></td>
+            <td>
+              <button onclick="dzestKriteriju(this)">Dzēst</button> 
+              <button onclick="LabotKriteriju()">Labot</button> 
+            </td>
+           </tr>
     </tbody>
 </table>
 </div>
@@ -75,7 +100,11 @@
   <p></p>
   <a href="skolotajs_skolena_limenis.html"  class="button">Izveidot</a>
  </footer>
+ <button type="button" onclick="kriterijs()">Pievieno jaunu kritēriju</button>
 
+<script src='script/kriterijs.js'></script>
+<script src='script/dzestKriteriju.js'></script>
+<script src='script/labotKriteriju.js'></script>
 </body>
 
 </html>

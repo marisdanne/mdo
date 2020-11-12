@@ -8,7 +8,9 @@ var suna = pedeja.cells.length;
 var rindina = tabula.insertRow (tabula.rows.length);  
 rindina.innerHTML=`<td> <input type="text"   ></td>
 <td> <input type="text"   ></td>
-<td> <input type="text"   ></td><td> <input type="text"  ></td><td> <input type="text"   ></td>`
+<td> <input type="text"   ></td>
+<td> <input type="text"  ></td>
+<td> <input type="text"   ></td>`
 
 // for (var j = 1; j < suna; j++)                                  
 //    {

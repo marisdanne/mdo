@@ -1,4 +1,4 @@
-.snieguma_limenu_tabula{
+#snieguma_limenu_tabula{
     width: calc(100% - 128px);
     margin-left: auto;
     margin-right: auto;
@@ -6,22 +6,22 @@
     border-collapse: separate;
     border-spacing: 0 10px;
 }
-.snieguma_limenu_tabula tr {
+#snieguma_limenu_tabula tr {
     height: 32px;
    line-height: 32px;
 }
-.snieguma_limenu_tabula thead tr {
+#snieguma_limenu_tabula thead tr {
     height: 24px;
     line-height: 24px;
     background-color: #001B36;
     color: white;
 }
-.snieguma_limenu_tabula th {
+#snieguma_limenu_tabula th {
     font-size: 16px;
     font-weight: 300;
 }
-.snieguma_limenu_tabula td,
-.snieguma_limenu_tabula th {
+#snieguma_limenu_tabula td,
+#snieguma_limenu_tabula th {
     padding: 12px 10px;
     width: 20%;
 }
@@ -31,18 +31,18 @@
     text-align: center;
 }
 
-.snieguma_limenu_tabula tr td:first-child,
-.snieguma_limenu_tabula tr th:first-child {
+#snieguma_limenu_tabula tr td:first-child,
+#snieguma_limenu_tabula tr th:first-child {
     text-align: center;
 }
-.snieguma_limenu_tabula tbody td {
+#snieguma_limenu_tabula tbody td {
     font-size: 16px;
     font-weight: 300;
     color: #001B36;
 }
-.snieguma_limenu_tabula tbody tr td:nth-child(2) {
+#snieguma_limenu_tabula tbody tr td:nth-child(2) {
     font-weight: 500;
 }
-.snieguma_limenu_tabula tr {
+#snieguma_limenu_tabula tr {
     box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.05);
 }
