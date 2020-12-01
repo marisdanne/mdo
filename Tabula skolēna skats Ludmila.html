@@ -5,6 +5,7 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/front_page.css">
+    <link rel="stylesheet" href="css/augsa.css">
   </head>
 
   <body>
@@ -13,21 +14,28 @@
       <a href="/" class="logo">
         <img src="images/rlogo.png" alt=" MDP logo">
       </a>
-      <form>
-        <p>Datums 
-        <input type="date" name="calendar" value="2020-09-01"
-         max="2021-05-31" min="2020-09-01">
-        <input type="submit" value="Nosutīt"></p>
-       </form>
-      
-      <p>Tēma__________________________________</p>
-      <p>Klase</p>
-      <select>
-        <option> 9 klase</option>
-        <option>10 klase</option>
-        <option>11 klase</option>
-        <option>12 klase</option>
-      </select>
+      <div class="container">
+        <div class="container container-column">
+          <form>
+            <p>Datums
+            <input type="date" name="calendar" value="2020-09-01"
+            max="2021-05-31" min="2020-09-01">
+            <input type="submit" value="Nosutīt"></p>
+          </form>
+
+          <p>Tēma__________________________________</p>
+        </div>
+        <div class="container"></div>
+          <p>Klase</p>
+          <select>
+            <option> 9 klase</option>
+            <option>10 klase</option>
+            <option>11 klase</option>
+            <option>12 klase</option>
+          </select>
+        </div>
+      </div>
+
       <div class="header-right">
         <a href="/">Skolotājs</a>
       </div>
