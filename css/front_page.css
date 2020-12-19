@@ -2,23 +2,31 @@
   display: flex;
   justify-content: center;
   /* background-color: green; */
+  background: #cbe2c1;
+  background: -webkit-linear-gradient(to right, #a1d3b0, #f6f1d3);
+  background: -moz-linear-gradient(to right, #a1d3b0, #f6f1d3);
+  background: linear-gradient(to right, #a1d3b0, #f6f1d3);
+  
 }
 
 .front_page > section {
   min-height: 100vh;
   padding: 120px 20px 0;
-  /* background-color: yellow; */
+   /*background-color: yellow; */
+  
+
 }
 
 .front_page_right h2 {
   font-weight: 500;
   font-size: 42px;
   margin: 30px 0 20px;
-  color: var(--blue);
+  color: maroon;
 }
 
 .logo_letter{
     font-size: 64px;
     font-weight: 900;
+    color: maroon;
     padding: 24px 0;
 }

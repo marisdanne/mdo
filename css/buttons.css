@@ -2,11 +2,11 @@
   display: block;
   cursor: pointer;
   padding: 4px 12px;
-  background: var(--neutral-500);
-  border: 1px solid var(--neutral-900);
+  background: green;
+  border: 1px solid var(olive);
   border-radius: 10px;
   color: var(--neutral-0);
-  font-size: 20px;
+  font-size: 30px;
 }
 
 .button:hover {
