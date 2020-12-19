@@ -30,3 +30,24 @@
     color: maroon;
     padding: 24px 0;
 }
+.radio{
+	font-size: 25px;
+    font-weight: 900;
+    color: black;
+    padding: 24px 0;
+}
+.front_klase{
+  border: 1px solid black;
+  margin: 100px 30px 75px 50px;
+  background-color: red;
+}
+.front_page-column{
+  
+ 
+  flex-direction: column;
+}
+.front_page_datums{
+  border: 1px solid black;
+  margin: 100px 30px 75px 50px;
+  background-color: red;
+}

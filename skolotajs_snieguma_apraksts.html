@@ -13,21 +13,27 @@
 
   <header>
     <a href="index.html" class="logo">
-      <img src="images/rlogo.png" alt=" MDP logo">
+      <img src="images/logo2.png" alt=" MDP logo">
     </a>
     <div class="header-right">
-      <p>Anna Kalniņa</p>
+      
       <a href="/">Skolotājs</a>
+      <p> Jānis Osis</p>
     </div>
   </header>
 
   <div class="content">
-    <div class="dropdown">
-      <button class="dropbtn">Klase</button>
-      <div class="dropdown-content" >
-        <a href="#">12.</a>
-        <a href="#">11.</a>
-        <a href="#">10.</a>
+    <div class="front_klase">
+      
+      <p >Klase:</p>
+      
+        <select >
+          <option> 9 klase</option>
+          <option>10 klase</option>
+          <option>11 klase</option>
+          <option>12 klase</option>
+        </select>
+        
       </div>
 
     </div>
@@ -35,11 +41,11 @@
     <table id="snieguma_limenu_tabula" >
       <thead >
           <tr>
-              <th width="20%">Kritērijs</th>
-              <th wid="20%"><p>1</p> <p>Gatava instrukcija</p></th>
-              <th width="20%"><p>2</p> <p>Spēja rīkoties ar nelielu palīdzību</p></th>
-              <th width="20%"> <p>3</p> <p> Spēja rīkoties patstāvīgi</p></th>
-              <th width="20%"> <p>4</p> <p>Prognozē rezultātu, spēja skaidrot rīcības</p> </th>
+              <th width="20%"><h3>Kritērijs</th></h3>
+              <th wid="20%"><p><h3>1</p> <p>Gatava instrukcija</p></th></h3>
+              <th width="20%"><p><h3>2</p> <p>Spēja rīkoties ar nelielu palīdzību</p></th></h3>
+              <th width="20%"> <p><h3>3</p> <p> Spēja rīkoties patstāvīgi</p></th></h3>
+              <th width="20%"> <p><h3>4</p> <p>Prognozē rezultātu, spēja skaidrot rīcības</p> </th></h3>
               <th></th>
           </tr>
       </thead>
@@ -88,8 +94,8 @@
             <td><input type="text" id="tris" ></td>
             <td><input type="text" id="cetri" ></td>
             <td>
-              <button onclick="dzestKriteriju(this)">Dzēst</button> 
-              <button onclick="LabotKriteriju()">Labot</button> 
+              <button  onclick="dzestKriteriju(this)">Dzēst</button> 
+              <button  onclick="LabotKriteriju()">Labot</button> 
             </td>
            </tr>
     </tbody>
@@ -100,7 +106,7 @@
   <p></p>
   <a href="skolotajs_skolena_limenis.html"  class="button">Izveidot</a>
  </footer>
- <button type="button" onclick="kriterijs()">Pievieno jaunu kritēriju</button>
+ <button  background="green" class="button" onclick="kriterijs()">Pievieno jaunu kritēriju</button>
 
 <script src='script/kriterijs.js'></script>
 <script src='script/dzestKriteriju.js'></script>

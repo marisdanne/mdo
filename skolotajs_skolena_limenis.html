@@ -12,39 +12,40 @@
 
   <header>
     <a href="/" class="logo">
-      <img src="images/rlogo.png" alt=" MDP logo">
+      <img src="images/logo2.png" alt=" MDP logo">
     </a>
     <div class="header-right">
-      <p>Anna Kalniņa</p>
+      
       <a href="/">Skolotājs</a>
+      <p> Jānis Osis</p>
     </div>
   </header>
 
   <div class="content">
-    <div class="dropdown">
-      <button class="dropbtn">Klase</button>
-      <div class="dropdown-content" >
-        <a href="#">12.</a>
-        <a href="#">11.</a>
-        <a href="#">10.</a>
-      </div>
-      <button class="dropbtn">Temats</button>
-      <div class="dropdown-content">
-        <a href="#">Izklājlapas funkciju grafiku konstruēšana.</a>
-        <a href="#">Nolasīt un attēlot datus dažādās diagrammās</a>
-        <a href="#">Aprēķinu tabulu veidošana</a>
-      </div>
+    
+    <div class="front_klase">
+      
+      <p >Klase:
+      
+        <select >
+          <option> 9 klase</option>
+          <option>10 klase</option>
+          <option>11 klase</option>
+          <option>12 klase</option>
+        </select>
+      </p>
+      
     </div>
 
-    <table class="snieguma_limenu_tabula" >
+    <table id="snieguma_limenu_tabula" >
       <thead >
           <tr>
-              <th>Skolēna vārds, uzvārds</th>
-              <th class="procenti">Snieguma līmenis (%)</th>
-              <th>Pašvērtējums</th>
-              <th class="procenti">Uzlabotais snieguma līmenis (%)</th>
-              <th>Pašvērtējums</th>
-              <th>Skolotāja vērtējums</th>
+              <th><h3>Skolēna vārds, uzvārds</h3></th>
+              <th class="procenti"><h3>Snieguma līmenis (%)</h3></th>
+              <th><h3>Pašvērtējums</h3></th>
+              <th class="procenti"><h3>Uzlabotais snieguma līmenis (%)</h3></th>
+              <th><h3>Pašvērtējums</h3></th>
+              <th><h3>Skolotāja vērtējums</h3></th>
           </tr>
       </thead>
 
@@ -57,7 +58,7 @@
             <td></td>
             <td >
               <form align="center">
-                 <input type="number" id="fname" name="fname"> % <img src="images/zimulis2.png" alt ="zimulis" width="8%" height="8%" >
+                 <input type="number" id="fname" name="fname"> % 
               </form>
             </td>
         </tr>
@@ -69,7 +70,7 @@
           <td>Mēģināju mājās saprast, neskaidro noskaidroju konsultācijās. Vērtējums un zināšanas uzlabojās</td>
           <td >
             <form align="center">
-               <input type="number" id="fname" name="fname"> % <img src="images/zimulis2.png" alt ="zimulis" width="8%" height="8%" >
+               <input type="number" id="fname" name="fname"> % 
             </form>
           </td>
       </tr>
