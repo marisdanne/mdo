@@ -7,7 +7,8 @@
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet"  href="css/noform.css">
     <link rel="stylesheet"  href="css/klase.css">
-    <script src="script/skolens_tabula.css"></script>
+    <link rel="stylesheet"  href="css/buttons.css">
+    
   </head>
 
   <body>
@@ -30,6 +31,7 @@
         <p >Klase:</p>
         
           <select >
+            <option> 8 klase</option>
             <option> 9 klase</option>
             <option>10 klase</option>
             <option>11 klase</option>
@@ -76,17 +78,19 @@
         </tbody>
       </table>
     </div>
-    <p> </p>
-    <p> </p>
-    <h2> <font color = "maroon" >Tavs snieguma līmenis 6 punkti  50 %</font></h2>
-    <p align = "center"><progress id="file" value="50" max="100"> 50% </progress></p>
-
-    <p><h2><font color = "green" >Es uzskatu, ka mans snieguma līmenis ir atbilstošs manām zināšanām, protams, ka es varu labāk.</font></h2></p>
+    <span id="vertiba" font-size="24px" font-weight="600"></span> 
+    <span id="procenti"> </span>
+    <br>
+    <label> Pašvērtējums: </label> <br>
+    <form> 
+      <textarea ></textarea> 
+    </form>
 
     <footer>
       <p></p>
-      <a href="skolens_uzlabot_limeni.html"  class="button">Saglabāt</a>
+      <button class="buton" onclick="saglabat()"> Saglabāt </button> 
     </footer>
-
+    <script src='script/saglabat.js'></script>
+    <script src="script/skolens_tabula.css"></script>
   </body>
 </html>
