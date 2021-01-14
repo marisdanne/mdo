@@ -5,24 +5,11 @@ for(var i=1; i<table.rows.length;i++){
    console.log('es pārbaudu'+i+"rindu");
   for (var j=1; j<table.rows[i].cells.length;j++){
      
-         if((table.rows[i].cells[j].bgColor=="yellow")&&( j==1)) {
-            summa=summa+ 1;
+         if(table.rows[i].cells[j].bgColor=="yellow") {
+            summa=summa+ j;
             console.log("kolonna "+j);
             console.log(summa);
-         } else if((table.rows[i].cells[j].bgColor=="yellow")&&( j==2)) {
-               summa=summa+ 2; 
-               console.log("kolonna "+j);
-               console.log(summa);
-            } else if((table.rows[i].cells[j].bgColor=="yellow")&&( j==3)) {
-               summa=summa+ 3;
-               console.log("kolonna "+j);
-               console.log(summa);
-
-            } else if((table.rows[i].cells[j].bgColor=="yellow")&&( j==4)) {
-               summa=summa+ 4;
-               console.log("kolonna "+j);
-               console.log(summa);
-            } 
+         } 
          } 
       
    
