@@ -1,5 +1,5 @@
 footer {
-  position: fixed;
+  position: static;
   bottom: 0;
   left: 0;
   /* background: red; */
@@ -9,4 +9,8 @@ footer {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  background: #cbe2c1;
+  background: -webkit-linear-gradient(to right, #a1d3b0, #f6f1d3);
+  background: -moz-linear-gradient(to right, #a1d3b0, #f6f1d3);
+  background: linear-gradient(to right, #a1d3b0, #f6f1d3);
 }
