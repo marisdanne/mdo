@@ -9,7 +9,7 @@
     <link rel="stylesheet"  href="css/klase.css">
 	    <script src="script/skolens_tabula.css"></script>
   </head>
-  <body>
+  <body class=body-back>
     <header>
       <a href="index.html" class="logo">
         <img src="images/logo2.png" alt=" MDO logo">
@@ -18,9 +18,9 @@
         <p>Lietotājs</p>
       </div>
     </header>
-    <div class="radio">
+    <div class="front_page_top">
     <section class="front_page_right margin-right aling-right margin-botomm">
-         <p ><h4><label >Lietotāja vārds:</label><br>
+         <p ><label >Lietotāja vārds:</label><br>
           <input type="text" id="epasts" name="epasts"><br>
           <label>Parole:</label><br>
           <input type="text" id="parole" name="parole"><br>
@@ -28,13 +28,20 @@
             <input type="text" id="epasts" name="epasts"><br>
             <label>Uzvārds:</label><br>
             <input type="text" id="parole" name="parole"><br>
-              <label>Skolotājs/Skolēns:</label><br>
-              <input type="text" id="epasts" name="epasts"><br>
-              <label>Klase:</label><br>
-              <input type="text" id="parole" name="parole"><br></h4></p>
-            <a href="./izvelne_lietotajs.html" class="button">Pieslēgties</a>
+			        
+          <div>
+            <form>
+              <div class="front_page_top">
+                <p><a href="./admin_skolenu_saraksts.html" class="button" >Skolēns</a></p>
+        
+                <p><a href="./admin_skolotaju_saraksts.html"class="button">Skolotājs</a> </p>
+                  </div>
+            </form>
+          </div>
+        </div>
+        
     </section>        
-    </div>
+    
     
   </body>
 </html>
