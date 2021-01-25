@@ -7,16 +7,16 @@ app = Flask(__name__)
 def home():
     return render_template('index.html')
 
-    @app.route('/')
-def home():
+@app.route('/above')
+def above():
     return render_template('admin_lietotajs_saraksts.html')
 
-    @app.route('/')
-def home():
+@app.route('/pan')
+def pan():
     return render_template('admin_skolenu_saraksts.html')
 
-    @app.route('/')
-def home():
+@app.route('/lot')
+def lot():
     return render_template('admin_skolotaju_saraksts.html')
 
 @app.route('/maris')
