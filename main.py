@@ -26,7 +26,9 @@ def maris():
 @app.route('/login')
 def login():
     return "Šeit būs login lapa!"
-
+@app.route('/skolens')
+def skolens():
+    return render_template('skolens_noteikt_limeni.html')
 
 
 app.run(debug=True)
