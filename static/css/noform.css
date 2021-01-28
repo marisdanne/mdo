@@ -36,7 +36,7 @@
 
 #snieguma_limenu_tabula tr td:first-child,
 #snieguma_limenu_tabula tr th:first-child, 
-.text-center tr td{
+.text-center tr td, .text-center {
     text-align: center;
 }
 #snieguma_limenu_tabula tbody td {

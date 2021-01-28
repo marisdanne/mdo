@@ -55,7 +55,14 @@
   .margin-botomm{
       padding: 40px;
   }
+  .margin-auto{
+      margin-right:auto;
+	  margin-left:auto;
+  }
   .body-back{
 	  background-color:#f6f1d3;
+  }
+  .button-width{
+    width: 172px;
   }
 		
