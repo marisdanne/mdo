@@ -41,7 +41,7 @@ def skolens():
     return render_template('skolens_noteikt_limeni.html')
 
 
-@app.route('/skolotajs_snieguma_apraksts.html')
+@app.route('/skolotajs_snieguma_apraksts')
 def skolotajs_snieguma_apraksts():
     return render_template('skolotajs_snieguma_apraksts.html')
 
