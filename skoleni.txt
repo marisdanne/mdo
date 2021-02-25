@@ -1,0 +1,4 @@
+{"vards":"Jānis", "uzvards":"Liepa", "klase":"12.a"}
+{"vards":"Ivans", "uzvards":"Ozols", "klase":"10.a"}
+{"vards":"Aleksejs", "uzvards":"Kļava", "klase":"10.a"}
+{"vards":"Inga", "uzvards":"Ose", "klase":"12.a"}
