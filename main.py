@@ -71,5 +71,20 @@ def maris_test_post_dati():
     ierakstitDatus('maris.txt', json.dumps(dati))
 
     return "1"
+@app.route('/skolenu_sniegums/get')
+def skolenu_sniegums_get():
+    dati = nolasitDatus('skolens_noteikt_limeni.txt')
+    return json.dumps(dati)
+  
+@app.route('/skolenu_sniegums/post')
+def skolenu_sniegums_post():
+    return render_template('skolenu_sniegums_post.html') 
 
+@app.route('/skolenu_sniegums/post', methods=['POST'])
+def skolenu_sniegums_post_dati():
+    dati = request.json
+   
+    ierakstitDatus('skolens_noteikt_limeni.txt', json.dumps(dati))
+
+    return "1"
 app.run(debug=True)
