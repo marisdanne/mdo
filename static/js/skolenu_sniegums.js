@@ -49,7 +49,7 @@ async function sanemtDatus(){
         tabulaDatiem.innerHTML = ""
 
     for(let rinda of datuObjekts){
-        tabulaDatiem.innerHTML ="<p>Kritērijs:" + rinda.Kriterijs + "1 punkts: " + rinda.pirmais  + "2 punkti: " + rinda.otrais + "3 punkti: " + rinda.tresais + "4 punkti: " + rinda.ceturtais+ "</p>"
+        tabulaDatiem.innerHTML =tabulaDatiem.innerHTML+"<p>Kritērijs:" + rinda.Kriterijs + "1 punkts: " + rinda.pirmais  + "2 punkti: " + rinda.otrais + "3 punkti: " + rinda.tresais + "4 punkti: " + rinda.ceturtais+ "</p>"
     }
     
 } 

@@ -3,5 +3,9 @@
 {"Kriterijs": "skola", "pirmais": "maja", "otrais": "kaja", "tresais": "roka", "ceturtais": "galva"}
 {"Kriterijs": "kakis", "pirmais": "zoss", "otrais": "titars", "tresais": "zakis", "ceturtais": "pile"}
 {"Kriterijs": "amizanti", "pirmais": "vairs", "otrais": "negrib", "tresais": "iet", "ceturtais": "gets"}
-
 {"Kriterijs": "zoja", "pirmais": "moja", "otrais": "noja", "tresais": "soja", "ceturtais": "boja"}
+{"Kriterijs": "aaa", "pirmais": "sss", "otrais": "ddd", "tresais": "dd", "ceturtais": "dd"}
+{"Kriterijs": "aaa", "pirmais": "sss", "otrais": "sss", "tresais": "sss", "ceturtais": "sss"}
+{"Kriterijs": "aaa", "pirmais": "sss", "otrais": "ddd", "tresais": "sss", "ceturtais": "eee"}
+{"Kriterijs": "Dana", "pirmais": "Anna", "otrais": "Ludmila", "tresais": "Airita", "ceturtais": "Ambiciozais Ledusskapis"}
+{"Kriterijs": "ttttt", "pirmais": "ssss", "otrais": "rrr", "tresais": "ssss", "ceturtais": "dddd"}
