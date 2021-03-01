@@ -9,3 +9,6 @@
 {"Kriterijs": "aaa", "pirmais": "sss", "otrais": "ddd", "tresais": "sss", "ceturtais": "eee"}
 {"Kriterijs": "Dana", "pirmais": "Anna", "otrais": "Ludmila", "tresais": "Airita", "ceturtais": "Ambiciozais Ledusskapis"}
 {"Kriterijs": "ttttt", "pirmais": "ssss", "otrais": "rrr", "tresais": "ssss", "ceturtais": "dddd"}
+{"Kriterijs": "skola", "pirmais": "\u0113ka", "otrais": "kalme", "tresais": "zari", "ceturtais": "das"}
+{"Kriterijs": "aaa", "pirmais": "sss", "otrais": "ddd", "tresais": "fff", "ceturtais": "ggggg"}
+{"Kriterijs": "alfab\u0113ts", "pirmais": "meginajums", "otrais": "vakars", "tresais": "\u017danis", "ceturtais": "Zi\u0146a"}

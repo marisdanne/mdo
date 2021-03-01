@@ -1,15 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <title>Document</title>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="static/img/favicon.ico">
-</head>
-<body>
+  <head>
+    <title>Tabula</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/static/css/normalize.css">
+    <link rel="stylesheet" href="/static/css/main.css">
+    <link rel="stylesheet"  href="/static/css/noform.css">
+    <link rel="stylesheet"  href="/static/css/klase.css">
+    <link rel="stylesheet"  href="/static/css/buttons.css">
+    <link rel="shortcut icon" href="/static/img/favicon.ico">
     
+  </head>
 
-    
-</body>
+  <body>
+
+    <header>
+      <a href="/" class="logo">
+        <img src="/static/img/logo2.png" alt=" MDO logo">
+      </a>
+      <div class="header-right">
+        
+        <a href="/">Skolēns</a>
+        <p>Ilva Lapiņa</p>
+      </div>
+    </header>
+
+    <div class="content">
+     
+        <div class="front_klase">
+      
+        <p >Klase:</p>
+        
+          <select >
+            <option> 8 klase</option>
+            <option> 9 klase</option>
+            <option>10 klase</option>
+            <option>11 klase</option>
+            <option>12 klase</option>
+            <option>13 klase</option>
+          </select>
+          
+        </div>
+      </div>
+
+      <table id="snieguma_limenu_tabula" >
+        <thead >
+          <tr>
+            <th id="Kriterijs"><h3>Kritērijs</h3></th>
+            <th id="1"><p><h3>1</p> <p>Gatava instrukcija</p></h3></th>
+            <th id="2"><p><h3>2</p> <p>Spēja rīkoties ar nelielu palīdzību</p></h3></th>
+            <th id="3"> <p><h3>3</p> <p> Spēja rīkoties patstāvīgi</p></h3></th>
+            <th id="4"> <p><h3>4</p> <p>Prognozē rezultātu, spēja skaidrot rīcības</p></h3> </th>
+          </tr>
+        </thead>
+
+        <tbody  >
+          {% for rinda in dati %}
+          <tr class= "Kritērijs">
+          {% for key, value in rinda.items() %}
+            <td onClick = "this.bgColor='yellow'"> {{ value }} </td>
+          {% endfor %}
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+    <span id="vertiba" font-size="24px" font-weight="600"></span> 
+    <span id="procenti"> </span>
+    <br>
+    <label> Pašvērtējums: </label> <br>
+    <form> 
+      <textarea ></textarea> 
+    </form>
+
+    <footer>
+      <p></p>
+      <button class="buton" onclick="saglabat()"> Saglabāt </button> 
+    </footer>
+    <script src='/static/js/saglabat.js'></script>
+    <script src="/static/js/skolens_tabula.js"></script>
+  </body>
 </html>

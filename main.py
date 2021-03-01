@@ -74,7 +74,8 @@ def maris_test_post_dati():
 @app.route('/skolenu_sniegums/get')
 def skolenu_sniegums_get():
     dati = nolasitDatus('skolens_noteikt_limeni.txt')
-    return json.dumps(dati)
+    return render_template('skolenu_sniegums_get.html', dati = dati)  
+  #  return json.dumps(dati)
   
 @app.route('/skolenu_sniegums/post')
 def skolenu_sniegums_post():
