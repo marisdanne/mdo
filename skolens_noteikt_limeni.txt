@@ -12,3 +12,16 @@
 {"Kriterijs": "skola", "pirmais": "\u0113ka", "otrais": "kalme", "tresais": "zari", "ceturtais": "das"}
 {"Kriterijs": "aaa", "pirmais": "sss", "otrais": "ddd", "tresais": "fff", "ceturtais": "ggggg"}
 {"Kriterijs": "alfab\u0113ts", "pirmais": "meginajums", "otrais": "vakars", "tresais": "\u017danis", "ceturtais": "Zi\u0146a"}
+{"Kriterijs": "4", "pirmais": "5", "otrais": "7", "tresais": "9", "ceturtais": "9"}
+{"Kriterijs": "k\u0101ja", "pirmais": "m\u0101ja", "otrais": "st\u0101ja", "tresais": "zero", "ceturtais": "baigi"}
+{"Kriterijs": "zakis", "pirmais": "kakis", "otrais": "trusis", "tresais": "maja", "ceturtais": "zaja"}
+{"Kriterijs": "aaa", "pirmais": "ss", "otrais": "sss", "tresais": "sss", "ceturtais": "ss"}
+{"Kriterijs": "1", "pirmais": "2", "otrais": "3", "tresais": "5", "ceturtais": "6"}
+{"Kriterijs": "2", "pirmais": "34", "otrais": "4", "tresais": "5", "ceturtais": "6"}
+{"Kriterijs": "2", "pirmais": "3", "otrais": "4", "tresais": "5", "ceturtais": "6"}
+{"Kriterijs": "1", "pirmais": "2", "otrais": "2", "tresais": "2", "ceturtais": "2"}
+{"Kriterijs": "2", "pirmais": "3", "otrais": "4", "tresais": "5", "ceturtais": "6"}
+{"Kriterijs": "3", "pirmais": "4", "otrais": "5", "tresais": "6", "ceturtais": "7"}
+{"Kriterijs": "a", "pirmais": "a", "otrais": "a", "tresais": "a", "ceturtais": "a"}
+{"Kriterijs": "e", "pirmais": "r", "otrais": "t", "tresais": "y", "ceturtais": "u"}
+{"Kriterijs": "222", "pirmais": "22", "otrais": "222", "tresais": "22", "ceturtais": "22"}

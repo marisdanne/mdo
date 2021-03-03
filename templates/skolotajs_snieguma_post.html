@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Tabula</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/static/css/normalize.css">
+    <link rel="stylesheet" href="/static/css/main.css">
+    <link rel="stylesheet"  href="/static/css/noform.css">
+    <link rel="stylesheet"  href="/static/css/klase.css">
+    <link rel="stylesheet" href="/static/css/augsa.css">
+    <link rel="shortcut icon" href="/static/img/favicon.ico">
+
+  </head>
+<body>
+
+  <header>
+    <a href="index.html" class="logo">
+      <img src="/static/img/logo2.png" alt=" MDP logo">
+    </a>
+
+    <div class="container">
+      <div class="container container-column">
+        <form>
+          <p>Datums
+          <input type="date" name="calendar" value="2020-09-01"
+          max="2021-05-31" min="2020-09-01">
+          <input type="submit" value="Nosutīt"></p>
+        </form>
+
+        <p> Tēma<input type="text" size="40"></p>
+        <div>  
+        </div>
+      </div>
+      <div class="container container-column">
+        <p>Klase</p>
+        <select>
+          <option> 9 klase</option>
+          <option>10 klase</option>
+          <option>11 klase</option>
+          <option>12 klase</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="header-right">
+      
+      <a href="/">Skolotājs</a>
+      <p> Jānis Osis</p>
+    </div>
+  </header>
+
+  <div class="content">
+    
+
+    </div>
+
+    <table id="snieguma_limenu_tabula" >
+      <thead >
+          <tr>
+              <th width="20%"><h3>Kritērijs</th></h3>
+              <th wid="20%"><p><h3>1</p> <p>Gatava instrukcija</p></th></h3>
+              <th width="20%"><p><h3>2</p> <p>Spēja rīkoties ar nelielu palīdzību</p></th></h3>
+              <th width="20%"> <p><h3>3</p> <p> Spēja rīkoties patstāvīgi</p></th></h3>
+              <th width="20%"> <p><h3>4</p> <p>Prognozē rezultātu, spēja skaidrot rīcības</p> </th></h3>
+              <th></th>
+          </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+    <td> <input id="Kriterijs" type="text"></td>
+    <td> <input id="pirmais" type="text"> </td>
+    <td> <input id="otrais" type="text"></td>
+    <td> <input id="tresais" type="text"></td>
+    <td> <input id="ceturtais" type="text"></td>
+   
+    <td> <button class="buton" onclick="sutitDatus()" type="button"> Saglabāt </button> </td>
+    </tr>
+    
+    <script src="/static/js/skolotajs_snieguma.js">  </script>
+    <div id="tabula">
+    </div>
+    </tbody>
+</table>
+</div>
+
+<footer>
+  <p></p>
+  <a href="#"  class="button">Izveidot</a>
+ </footer>
+ <button  background="green" class="button" onclick="kriterijs()">Pievieno jaunu kritēriju</button>
+
+  <script src='/static/js/kriterijs.js'></script>
+  <script src='/static/js/dzestKriteriju.js'></script>
+  <script src='/static/js/labotKriteriju.js'></script>
+</body>
+
+</html>

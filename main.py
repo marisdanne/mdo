@@ -88,4 +88,19 @@ def skolenu_sniegums_post_dati():
     ierakstitDatus('skolens_noteikt_limeni.txt', json.dumps(dati))
 
     return "1"
+@app.route('/skolotajs_snieguma/post')
+def skolotajs_snieguma_post():
+    return render_template('skolotajs_snieguma_post.html')
+
+@app.route('/skolotajs_snieguma/post/dati', methods=['POST'])
+def skolotajs_snieguma_post_dati():
+    dati = request.json
+   
+    ierakstitDatus('skolens_noteikt_limeni.txt', json.dumps(dati))
+
+    return "1"
+@app.route('/skolotajs_snieguma/get')
+def skolotajs_snieguma_get():
+    dati = nolasitDatus('skolens_noteikt_limeni.txt')
+    return render_template('skolotajs_snieguma_get.html', dati = dati) 
 app.run(debug=True)
