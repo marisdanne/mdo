@@ -102,5 +102,6 @@ def skolotajs_snieguma_post_dati():
 @app.route('/skolotajs_snieguma/get')
 def skolotajs_snieguma_get():
     dati = nolasitDatus('skolens_noteikt_limeni.txt')
-    return render_template('skolotajs_snieguma_get.html', dati = dati) 
+    return json.dumps(dati)
+  #  return render_template('skolotajs_snieguma_get.html', dati = dati) 
 app.run(debug=True)

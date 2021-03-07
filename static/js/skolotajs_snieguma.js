@@ -40,12 +40,26 @@ async function sutitDatus(){
 async function sanemtDatus(){
     const atbilde = await fetch('/skolotajs_snieguma/get')
     const datuObjekts = await atbilde.json()
-    let tabulaDatiem = document.getElementById('tabula')
-    tabulaDatiem.innerHTML = ""
+    console.log(datuObjekts)
+    let tabula = document.getElementById('snieguma_limenu_tabula')
+    //tabulaDatiem.innerHTML = ""
 
-    for(let rinda of datuObjekts){
-        tabulaDatiem.innerHTML = "<p>Kriterijs:" + rinda.kriterijs + "</p>"
-       // tabulaDatiem.innerHTML =tabulaDatiem.innerHTML+"<p>Kritērijs:" + rinda.kriterijs + "1 punkts: " + rinda.pirmais  + "2 punkti: " + rinda.otrais + "3 punkti: " + rinda.tresais + "4 punkti: " + rinda.ceturtais+ "</p>"
+    for(let dati of datuObjekts){
+       let rinda = tabula.insertRow(1)
+       let suna1=rinda.insertCell(0)
+       let suna2=rinda.insertCell(1)
+       let suna3=rinda.insertCell(2)
+       let suna4=rinda.insertCell(3)
+       let suna5=rinda.insertCell(4)
+       let suna6= rinda.insertCell(5)
+       suna1.innerHTML = dati.Kriterijs
+       suna2.innerHTML = dati.pirmais
+       suna3.innerHTML = dati.otrais
+       suna4.innerHTML = dati.tresais
+       suna5.innerHTML = dati.ceturtais
+       suna6.innerHTML= `<button onclick="dzestKriteriju(this)">Dzēst</button> 
+       <button onclick="LabotKriteriju()">Labot</button>`
+      // tabulaDatiem.innerHTML =innerHTML =tabulaDatiem.innerHTML+"<p>" + rinda.Kriterijs +  rinda.pirmais  + rinda.otrais  + rinda.tresais  + rinda.ceturtais+ "</p>"
     }
     
 } 

@@ -25,3 +25,6 @@
 {"Kriterijs": "a", "pirmais": "a", "otrais": "a", "tresais": "a", "ceturtais": "a"}
 {"Kriterijs": "e", "pirmais": "r", "otrais": "t", "tresais": "y", "ceturtais": "u"}
 {"Kriterijs": "222", "pirmais": "22", "otrais": "222", "tresais": "22", "ceturtais": "22"}
+{"Kriterijs": "Airita", "pirmais": "Ludmila", "otrais": "Dana", "tresais": "Anna", "ceturtais": "M\u0101ris"}
+{"Kriterijs": "aa", "pirmais": "sss", "otrais": "ddd", "tresais": "fff", "ceturtais": "dddd"}
+{"Kriterijs": "Zakis", "pirmais": "kakis", "otrais": "maja", "tresais": "kaja", "ceturtais": "zinu"}
