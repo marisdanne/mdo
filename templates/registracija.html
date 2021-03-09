@@ -1,56 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>Lietotājs</title>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="static/css/normalize.css">
-    <link rel="stylesheet" href="static/css/main.css">
-    <link rel="stylesheet"  href="static/css/noform.css">
-    <link rel="stylesheet"  href="static/css/klase.css">
-	    <script src="script/skolens_tabula.css"></script>
-  </head>
-  <body class=body-back>
-    <header>
-      <a href="index.html" class="logo">
-        <img src="static/img/logo2.png" alt=" MDO logo">
-      </a>
-      <div class="header-right">
-        <p>Lietotājs</p>
-      </div>
-    </header>
-    
-            <form>
-              
-              <section class="front_page_top margin-auto text-center margin-botomm">
-                    <div><label >Lietotājsietotāja vārds:</label><br>
-                      <input type="text" id="epasts" name="epasts"><br>
-                      <label>Parole:</label><br>
-                      <input type="text" id="epasts" name="epasts"><br>
-                      <label>Paroles atkārtoti:</label><br>
-                      <input type="text" id="parole" name="parole"><br>
-                        <label >Vārds:</label><br>
-                        <input type="text" id="epasts" name="epasts"><br>
-                        <label>Uzvārds:</label><br>
-                        <input type="text" id="parole" name="parole"><br>
-                        <label>Klase</label><br>
-                        <select class="button-width"> 
-                          <option> 9 klase</option>
-                          <option>10 klase</option>
-                          <option>11 klase</option>
-                          <option>12 klase</option>
-                        </select>   
-                    </div>
-                    <br>
-                  <div>
-                     <button class='margin-auto'>Reģistrēties</button>
-                  </div> 
-            </section>
-            </form>
-          
-        
-        
-            
-    
-    
-  </body>
+
+<head>
+  <title>Lietotājs</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="static/css/normalize.css">
+  <link rel="stylesheet" href="static/css/main.css">
+  <link rel="stylesheet" href="static/css/noform.css">
+  <link rel="stylesheet" href="static/css/klase.css">
+  <link rel="shortcut icon" href="static/img/favicon.ico">
+</head>
+
+<body class=body-back>
+  <header>
+    <a href="index.html" class="logo">
+      <img src="static/img/logo2.png" alt=" MDO logo">
+    </a>
+    <div class="header-right">
+      <p>Lietotājs</p>
+    </div>
+  </header>
+  <section class="front_page_top margin-auto text-center margin-botomm">
+    <div>
+      <label>Lietotājvārds:</label><br>
+      <input type="text" id="lietotajs" name="lietotajs"><br>
+
+      <label>Parole:</label><br>
+      <input type="password" id="parole" name="parole"><br>
+
+      <label>Paroles atkārtoti:</label><br>
+      <input type="password" id="parole_atk" name="parole_atk"><br>
+
+      <label>Vārds:</label><br>
+      <input type="text" id="vards" name="vards"><br>
+
+      <label>Uzvārds:</label><br>
+      <input type="text" id="uzvards" name="uzvards"><br>
+
+      <label>Klase</label><br>
+      <select class="button-width" id="klase">
+        <option value="9"> 9 klase</option>
+        <option value="10">10 klase</option>
+        <option value="11">11 klase</option>
+        <option value="12">12 klase</option>
+      </select>
+    </div>
+    <br>
+    <div>
+      <button onclick="registreties()" class='margin-auto'>Reģistrēties</button>
+    </div>
+  </section>
+
+  <script src="/static/js/registreties.js"></script>
+</body>
+
 </html>

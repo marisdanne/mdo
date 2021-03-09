@@ -1,6 +1,7 @@
 from flask import Flask, render_template, jsonify, request
 import json
 from darbs_ar_failu import nolasitDatus, ierakstitDatus
+from darbs_ar_db import registret
 
 app = Flask(__name__)
 
@@ -104,4 +105,12 @@ def skolotajs_snieguma_get():
     dati = nolasitDatus('skolens_noteikt_limeni.txt')
     return json.dumps(dati)
   #  return render_template('skolotajs_snieguma_get.html', dati = dati) 
+
+
+@app.route('/api/registracija', methods=['POST'])
+def api_registracija():
+    dati = request.json
+    registret(dati)
+    return "1"
+    
 app.run(debug=True)

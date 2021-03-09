@@ -1,17 +1,30 @@
 import sqlite3
 
-savienojums = sqlite3.connect("mdo.db") 
+DATUBAZE = "mdo.db"
 
-dati=savienojums.execute("SELECT * FROM lietotaji")
-print(dati)
+def ievietot(vaicajums):
+    savienojums = sqlite3.connect(DATUBAZE) 
+    dati = savienojums.execute(vaicajums)
+    savienojums.commit()
+    savienojums.close()
+    return dati
 
-#for rinda in dati:
-#    print(rinda)
+def atjaunot(vaicajums):
+    return ievietot(vaicajums)
 
-for rinda in dati:
-    print(rinda[1])
+def atlasit(vaicajums):
+    savienojums = sqlite3.connect(DATUBAZE)
+    dati = savienojums.execute(vaicajums)
+    savienojums.close()
+    return dati
 
+def registret(dati):
+    vaicajums = f"INSERT INTO lietotaji (vards, uzvards, loma, klase, lietotajvards, parole) VALUES ('{dati['vards']}', '{dati['uzvards']}', 'skolēns', '{dati['klase']}', '{dati['lietotajs']}', '{dati['parole']}')"
+    return ievietot(vaicajums)
 
+def lietotaji():
+    vaicajums = f"SELECT * from lietotaji"
+    dati = atlasit(vaicajums)
+    for rinda in dati:
+        print(rinda)
 
-
-savienojums.close()
