@@ -15,8 +15,14 @@ def atjaunot(vaicajums):
 def atlasit(vaicajums):
     savienojums = sqlite3.connect(DATUBAZE)
     dati = savienojums.execute(vaicajums)
+    vienarinda = ''
+    for rinda in dati:
+        print(rinda)
+        vienarinda = rinda
+        
     savienojums.close()
-    return dati
+    
+    return vienarinda
 
 def registret(dati):
     vaicajums = f"INSERT INTO lietotaji (vards, uzvards, loma, klase, lietotajvards, parole) VALUES ('{dati['vards']}', '{dati['uzvards']}', 'skolēns', '{dati['klase']}', '{dati['lietotajs']}', '{dati['parole']}')"
@@ -25,6 +31,5 @@ def registret(dati):
 def lietotaji():
     vaicajums = f"SELECT * from lietotaji"
     dati = atlasit(vaicajums)
-    for rinda in dati:
-        print(rinda)
+    return dati
 

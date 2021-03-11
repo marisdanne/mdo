@@ -1,7 +1,7 @@
 from flask import Flask, render_template, jsonify, request
 import json
 from darbs_ar_failu import nolasitDatus, ierakstitDatus
-from darbs_ar_db import registret
+from darbs_ar_db import registret, atlasit, lietotaji
 
 app = Flask(__name__)
 
@@ -16,13 +16,16 @@ def users():
 
 @app.route('/skoleni')
 def skoleni():
+    
     return render_template('admin_skolenu_saraksts.html')
 
 @app.route('/api/skoleni')
 def apiskoleni():
-    dati = nolasitDatus('skoleni.txt')
-    #dati = jsonify(dati)
-    #print(dati)
+    dati = lietotaji()
+    print(dati)
+    #dati = atlasit("SELECT * FROM lietotaji WHERE loma = 'skolēns'")
+    dati = jsonify(dati)
+   
     return dati
 
 @app.route('/skolotaji')
@@ -111,6 +114,8 @@ def skolotajs_snieguma_get():
 def api_registracija():
     dati = request.json
     registret(dati)
+    
     return "1"
+
     
 app.run(debug=True)
