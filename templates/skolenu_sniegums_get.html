@@ -8,6 +8,7 @@
     <link rel="stylesheet"  href="/static/css/noform.css">
     <link rel="stylesheet"  href="/static/css/klase.css">
     <link rel="stylesheet"  href="/static/css/buttons.css">
+    <link rel="stylesheet" href="/static/css/augsa.css">
     <link rel="shortcut icon" href="/static/img/favicon.ico">
     
   </head>
@@ -18,6 +19,29 @@
       <a href="/" class="logo">
         <img src="/static/img/logo2.png" alt=" MDO logo">
       </a>
+      <div class="container">
+        <div class="container container-column">
+          <form>
+            <p>Datums
+            <input type="date" name="calendar" value="2020-09-01"
+            max="2021-05-31" min="2020-09-01">
+            <input type="submit" value="Nosutīt"></p>
+          </form>
+  
+          <p> Tēma<input type="text" size="40"></p>
+          <div>  
+          </div>
+        </div>
+        <div class="container container-column">
+          <p>Klase
+          <select>
+            <option> 9 klase</option>
+            <option>10 klase</option>
+            <option>11 klase</option>
+            <option>12 klase</option>
+          </select></p>
+        </div>
+      </div>
       <div class="header-right">
         
         <a href="/">Skolēns</a>
@@ -25,23 +49,11 @@
       </div>
     </header>
 
+    
     <div class="content">
      
-        <div class="front_klase">
-      
-        <p >Klase:</p>
         
-          <select >
-            <option> 8 klase</option>
-            <option> 9 klase</option>
-            <option>10 klase</option>
-            <option>11 klase</option>
-            <option>12 klase</option>
-            <option>13 klase</option>
-          </select>
-          
-        </div>
-      </div>
+     
 
       <table id="snieguma_limenu_tabula" >
         <thead >

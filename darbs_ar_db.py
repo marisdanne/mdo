@@ -25,7 +25,7 @@ def atlasit(vaicajums):
     return vienarinda
 
 def registret(dati):
-    vaicajums = f"INSERT INTO lietotaji (vards, uzvards, loma, klase, lietotajvards, parole) VALUES ('{dati['vards']}', '{dati['uzvards']}', 'skolēns', '{dati['klase']}', '{dati['lietotajs']}', '{dati['parole']}')"
+    vaicajums = f"INSERT INTO lietotaji (vards, uzvards, loma, klase, lietotajvards, parole) VALUES ('{dati['vards']}', '{dati['uzvards']}', '{dati['loma']}', '{dati['klase']}', '{dati['lietotajs']}', '{dati['parole']}')"
     return ievietot(vaicajums)
 
 def lietotaji():

@@ -4,6 +4,7 @@ function registreties(){
     let paroleAtkInput = document.getElementById('parole_atk')
     let vardsInput = document.getElementById('vards')
     let uzvardsInput = document.getElementById('uzvards')
+    let lomaInput=document.getElementById('loma')
     let klaseInput = document.getElementById('klase')
 
     let lietotajs = lietotajsInput.value
@@ -11,6 +12,7 @@ function registreties(){
     let paroleAtk = paroleAtkInput.value
     let vards = vardsInput.value
     let uzvards = uzvardsInput.value
+    let loma = lomaInput.value
     let klase = klaseInput.value
 
     if(lietotajs.length < 3){
@@ -30,11 +32,17 @@ function registreties(){
     // console.log(vards)
     // console.log(uzvards)
     // console.log(klase)
-    let dati = JSON.stringify({"lietotajs": lietotajs, "parole":parole, "vards":vards, "uzvards":uzvards, "klase":klase })
+    let dati = JSON.stringify({"lietotajs": lietotajs, "parole":parole, "vards":vards, "uzvards":uzvards,"loma":loma, "klase":klase })
     sutitDatus(dati)
 
     alert("Jūs esat reģistrēts!")
     lietotajsInput.value = ""
+    paroleInput.value = ""
+    paroleAtkInput.value = ""
+    vardsInput.value = ""
+    lomaInput.value = ""
+    uzvardsInput.value = ""
+    klaseInput.value = ""
 }
 
 async function sutitDatus(dati){

@@ -1,31 +1,4 @@
 {"Kriterijs": "Darbu atlase un diagrammas veido\u0161ana", "pirmais": "Veidojot diagrammu, atlasu tikai nor\u0101d\u012btos v\u0113rt\u012bbu tabulas datus. Diagrammas tipu izv\u0113los, lietojot nor\u0101d\u012bjumus vai atg\u0101dnes", "otrais": "Atlasu visas v\u0113rt\u012bbas datu tabul\u0101, diagrammas tipu izv\u0113los apzin\u0101ti", "tresais": "Veidojot diagrammas, v\u0113rt\u012bbu tabul\u0101s atlasu nepiecie\u0161amos datus. Diagrammas tipu izv\u0113los apzin\u0101ti - sp\u0113ju nov\u0113rt\u0113t, vai konstru\u0113t\u0101s funkcijas grafiks atbilst funkcijai", "ceturtais": "Konstru\u0113jot funkcijas grafiku, atlasu tikai nepiecie\u0161amos datus, paredzot, k\u0101 tie uzskatami att\u0113los nepiecie\u0161amo skaitlisko inform\u0101ciju"}
 {"Kriterijs": "Diagrammas elementu  pievieno\u0161ana, no\u0146em\u0161ana, redi\u0123\u0113\u0161ana", "pirmais": "Konstru\u0113ju funkciju grafikus ar noklus\u0113tajiem (diagrammas tipa) format\u0113\u0161anas parametriem", "otrais": "Pievienoju un noform\u0113ju diagrammas elementus, lietojot paraugus vai vizualiz\u0101cijas materi\u0101lus", "tresais": "Uzskat\u0101mam datu att\u0113lojumam pievienoju, redi\u0123\u0113ju, no\u0146emu zin\u0101mus diagrammas elementus (virsrakstus, re\u017e\u0123l\u012bnijas, datu eti\u0137etes, le\u0123endu, mainu asu u.c. v\u0113rt\u012bbas)\",", "ceturtais": "Eksperiment\u0113ju, pievienojot, no\u0146emot un redi\u0123\u0113jot diagrammas elementus. Sp\u0113ju pamatot katra diagrammas elementa nepiecie\u0161am\u012bbu uzskat\u0101mai datu att\u0113lo\u0161anai"}
-{"Kriterijs": "skola", "pirmais": "maja", "otrais": "kaja", "tresais": "roka", "ceturtais": "galva"}
-{"Kriterijs": "kakis", "pirmais": "zoss", "otrais": "titars", "tresais": "zakis", "ceturtais": "pile"}
-{"Kriterijs": "amizanti", "pirmais": "vairs", "otrais": "negrib", "tresais": "iet", "ceturtais": "gets"}
-{"Kriterijs": "zoja", "pirmais": "moja", "otrais": "noja", "tresais": "soja", "ceturtais": "boja"}
-{"Kriterijs": "aaa", "pirmais": "sss", "otrais": "ddd", "tresais": "dd", "ceturtais": "dd"}
-{"Kriterijs": "aaa", "pirmais": "sss", "otrais": "sss", "tresais": "sss", "ceturtais": "sss"}
-{"Kriterijs": "aaa", "pirmais": "sss", "otrais": "ddd", "tresais": "sss", "ceturtais": "eee"}
-{"Kriterijs": "Dana", "pirmais": "Anna", "otrais": "Ludmila", "tresais": "Airita", "ceturtais": "Ambiciozais Ledusskapis"}
-{"Kriterijs": "ttttt", "pirmais": "ssss", "otrais": "rrr", "tresais": "ssss", "ceturtais": "dddd"}
-{"Kriterijs": "skola", "pirmais": "\u0113ka", "otrais": "kalme", "tresais": "zari", "ceturtais": "das"}
-{"Kriterijs": "aaa", "pirmais": "sss", "otrais": "ddd", "tresais": "fff", "ceturtais": "ggggg"}
-{"Kriterijs": "alfab\u0113ts", "pirmais": "meginajums", "otrais": "vakars", "tresais": "\u017danis", "ceturtais": "Zi\u0146a"}
-{"Kriterijs": "4", "pirmais": "5", "otrais": "7", "tresais": "9", "ceturtais": "9"}
-{"Kriterijs": "k\u0101ja", "pirmais": "m\u0101ja", "otrais": "st\u0101ja", "tresais": "zero", "ceturtais": "baigi"}
-{"Kriterijs": "zakis", "pirmais": "kakis", "otrais": "trusis", "tresais": "maja", "ceturtais": "zaja"}
-{"Kriterijs": "aaa", "pirmais": "ss", "otrais": "sss", "tresais": "sss", "ceturtais": "ss"}
-{"Kriterijs": "1", "pirmais": "2", "otrais": "3", "tresais": "5", "ceturtais": "6"}
-{"Kriterijs": "2", "pirmais": "34", "otrais": "4", "tresais": "5", "ceturtais": "6"}
-{"Kriterijs": "2", "pirmais": "3", "otrais": "4", "tresais": "5", "ceturtais": "6"}
-{"Kriterijs": "1", "pirmais": "2", "otrais": "2", "tresais": "2", "ceturtais": "2"}
-{"Kriterijs": "2", "pirmais": "3", "otrais": "4", "tresais": "5", "ceturtais": "6"}
-{"Kriterijs": "3", "pirmais": "4", "otrais": "5", "tresais": "6", "ceturtais": "7"}
-{"Kriterijs": "a", "pirmais": "a", "otrais": "a", "tresais": "a", "ceturtais": "a"}
-{"Kriterijs": "e", "pirmais": "r", "otrais": "t", "tresais": "y", "ceturtais": "u"}
-{"Kriterijs": "222", "pirmais": "22", "otrais": "222", "tresais": "22", "ceturtais": "22"}
-{"Kriterijs": "Airita", "pirmais": "Ludmila", "otrais": "Dana", "tresais": "Anna", "ceturtais": "M\u0101ris"}
-{"Kriterijs": "aa", "pirmais": "sss", "otrais": "ddd", "tresais": "fff", "ceturtais": "dddd"}
-{"Kriterijs": "Zakis", "pirmais": "kakis", "otrais": "maja", "tresais": "kaja", "ceturtais": "zinu"}
-{"Kriterijs": "amana", "pirmais": "atava", "otrais": "asava", "tresais": "ajusu", "ceturtais": "amusu"}
+{"Kriterijs": "Reizin\u0101\u0161anas tabula", "pirmais": "Prot tikai ar atg\u0101dni", "otrais": "Prot, bet aizmirst da\u017eus gad\u012bjumus", "tresais": "Prot izmantot standartsitu\u0101cij\u0101s", "ceturtais": "Prot izmantot gan standartsitu\u0101cij\u0101s, gan nestandartsitu\u0101cij\u0101s"}
+{"Kriterijs": "Racion\u0101lu skait\u013cu saskait\u012b\u0161ana un at\u0146em\u0161ana", "pirmais": "Prot tikai ar skolot\u0101ja pal\u012bdz\u012bbu", "otrais": "Prot ar nelielu skolot\u0101ja iesaist\u012b\u0161anos", "tresais": "Prot atrisin\u0101t patst\u0101v\u012bgi", "ceturtais": "Prot atrisin\u0101t nestandarta uzdevumus"}
