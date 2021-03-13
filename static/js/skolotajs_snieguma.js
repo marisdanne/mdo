@@ -57,8 +57,8 @@ async function sanemtDatus(){
        suna3.innerHTML = dati.otrais
        suna4.innerHTML = dati.tresais
        suna5.innerHTML = dati.ceturtais
-       suna6.innerHTML= `<button onclick="dzestKriteriju(this)">Dzēst</button> 
-       <button onclick="LabotKriteriju()">Labot</button>`
+       suna6.innerHTML= `<button onclick="dzestKriteriju(this)">Dzēst</button>
+      <button onclick="LabotKriteriju()">Labot</button>`
       // tabulaDatiem.innerHTML =innerHTML =tabulaDatiem.innerHTML+"<p>" + rinda.Kriterijs +  rinda.pirmais  + rinda.otrais  + rinda.tresais  + rinda.ceturtais+ "</p>"
     }
     
