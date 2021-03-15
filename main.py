@@ -1,5 +1,6 @@
 from flask import Flask, render_template, jsonify, request
 import json
+import sqlite3
 from darbs_ar_failu import nolasitDatus, ierakstitDatus
 from darbs_ar_db import registret, atlasit, lietotaji
 
@@ -27,6 +28,47 @@ def apiskoleni():
     dati = jsonify(dati)
    
     return dati
+
+@app.route('/api/v2/skoleni', methods=['GET'])
+def v2skoleni():
+    try:
+      # Izveidojam savienojumu ar Datubāzi
+      with sqlite3.connect("mdo.db") as conn:
+        # Izveidojam kursoru
+        c = conn.cursor()
+        # Izsaucam datu no Inventars tabulas. DAUDZUMS paņemam kā tukšu kolonu, lai rezultātos nebūtu Undefied
+        c.execute("SELECT id, vards, uzvards, klase FROM lietotaji  WHERE loma= 'Skolēns'" )
+        # Ielasam datus mainīgajā
+        data = c.fetchall()
+        jsonData = ''
+        # Kolonu nosaukumi, kādi tiks izmantoti JSON failā. Tiem ir jābūt tādā pašā secībā, kā kolonas lasām no tabulas SELECT izsaukumā
+        column_names = ['id','vards','uzvards','klase']
+        for row in data:
+          # Savienojam kolonu nosaukums ar datiem no tabulas
+          info = dict(zip(column_names, row))
+          # Pa vienai rindiņai papildimām jsonData mainīgo, līdz visi dati ir nolasīti no tabulas. Aiz katra ieraksta pieliekam komatu, lai atdalītu ierakstus.
+          jsonData = jsonData + json.dumps(info) + ','
+        # Noņemam pēdējo lieko komatu
+        jsonData = jsonData[:-1]
+        # Ieliekam visus datus kvadrātiekavās
+        jsonData = '[' + jsonData + ']'
+        msg = "Ieraksti veiksmīgi saņemti un apstrādāti"
+        print(msg)
+    except:
+      conn.rollback()
+      msg = "Ir notikusi kļūda datu saņemšanā un apstrādāšanā"
+      print(msg)
+    finally:
+      conn.commit()
+      c.close()
+      conn.close()    
+      return jsonData
+
+
+
+
+
+
 
 @app.route('/skolotaji')
 def skolotaji():
