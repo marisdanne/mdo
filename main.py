@@ -20,12 +20,13 @@ def skoleni():
     
     return render_template('admin_skolenu_saraksts.html')
 
-@app.route('/api/skoleni')
+@app.route('/api/v1/skoleni')
 def apiskoleni():
-    dati = lietotaji()
+    
+    
+    dati = atlasit("SELECT * FROM lietotaji WHERE loma = 'Skolēns'")
     print(dati)
-    #dati = atlasit("SELECT * FROM lietotaji WHERE loma = 'skolēns'")
-    dati = jsonify(dati)
+   
    
     return dati
 

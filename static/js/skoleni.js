@@ -19,7 +19,7 @@ async function getData(){
     //jsonInventars = await inventarsNoServera.json();
     //  jsonInventars = pievienotIerakstuParKategoriju(jsonInventars, 'inventars');
 
-    let atbilde = await fetch("/api/v2/skoleni");
+    let atbilde = await fetch("/api/v1/skoleni");
     let datiJson = await atbilde.json();
      console.log(datiJson)
     let tabula = document.getElementById('skoleni')
