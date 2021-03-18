@@ -51,3 +51,13 @@ def lietotaji():
     dati = atlasit(vaicajums)
     return dati
 
+def pieteikties(lietotajvards, parole):
+    vaicajums= f"SELECT loma FROM lietotaji WHERE lietotajvards = '{lietotajvards}' AND parole = '{parole}'"
+    savienojums = sqlite3.connect(DATUBAZE)
+    dati = savienojums.execute(vaicajums).fetchall()
+    savienojums.commit()
+    savienojums.close()
+    if len(dati) == 1:
+        return dati[0][0]
+    else:
+        return False
