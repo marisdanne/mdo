@@ -5,10 +5,10 @@ DATUBAZE = "mdo.db"
 
 def ievietot(vaicajums):
     savienojums = sqlite3.connect(DATUBAZE)
-    dati = savienojums.execute(vaicajums)
+    savienojums.execute(vaicajums)
     savienojums.commit()
     savienojums.close()
-    return dati
+    return '1'
 
 def atjaunot(vaicajums):
     return ievietot(vaicajums)

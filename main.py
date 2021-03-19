@@ -114,11 +114,9 @@ def skolenu_sniegums_post_dati():
 def prasmes():
     return render_template('prasmes.html')
 
-@app.route('/skolotajs_snieguma/post/dati', methods=['POST'])
-def skolotajs_snieguma_post_dati():
-    dati = request.json
-    pievienot_prasmi(dati)
-    return "1"
+@app.route('/prasmes', methods=['POST'])
+def prasmes_post():
+    return pievienot_prasmi(request.json)
 
 @app.route('/api/v1/prasmes')
 def prasmes_api():
