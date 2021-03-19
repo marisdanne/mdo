@@ -2,7 +2,7 @@ from flask import Flask, render_template, jsonify, request, redirect
 import json
 import sqlite3
 from darbs_ar_failu import nolasitDatus, ierakstitDatus
-from darbs_ar_db import registret, atlasit, lietotaji, pieteikties, atlasit_lietotajus, atlasit_prasmes
+from darbs_ar_db import registret, atlasit, lietotaji, pieteikties, atlasit_lietotajus, atlasit_prasmes, pievienot_prasmi
 
 app = Flask(__name__)
 
@@ -117,7 +117,7 @@ def prasmes():
 @app.route('/skolotajs_snieguma/post/dati', methods=['POST'])
 def skolotajs_snieguma_post_dati():
     dati = request.json
-    ierakstitDatus('skolens_noteikt_limeni.txt', json.dumps(dati))
+    pievienot_prasmi(dati)
     return "1"
 
 @app.route('/api/v1/prasmes')

@@ -73,3 +73,8 @@ def atlasit_prasmes():
     msg = "Ieraksti veiksmīgi saņemti un apstrādāti"
     print(msg)
     return jsonData    
+
+def pievienot_prasmi(dati):
+    vaicajums = f"INSERT INTO prasmes (prasme, snieguma_limenis_1, snieguma_limenis_2, snieguma_limenis_3, snieguma_limenis_4, temati_id)"\
+        f"VALUES ('{dati['prasmes']}', '{dati['snieguma_limenis_1']}', '{dati['snieguma_limenis_2']}', '{dati['snieguma_limenis_3']}', '{dati['snieguma_limenis_4']}', 1)"
+    return ievietot(vaicajums)

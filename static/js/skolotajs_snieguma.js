@@ -1,41 +1,26 @@
 sanemtDatus()
 
 async function sutitDatus(){
-   // console.log ("Mēģinām sūtīt datus")
-    let criteria = document.getElementById('Kriterijs')
-    let one = document.getElementById('pirmais')
-    let two = document.getElementById('otrais')
-    let three = document.getElementById('tresais')
-    let four = document.getElementById('ceturtais')
-    
-
-
-    let kriterijs = criteria.value
-    let viens = one.value
-    let divi = two.value
-    let tris = three.value
-    let cetri = four.value
-    
-    //Nodzēš ievades laukus
-    criteria.value = ''
-    one.value = ''
-    two.value = ''
-    three.value = ''
-    four.value = ''
-
-
+    let criteria = document.getElementById('prasmes')
+    let one = document.getElementById('snieguma_limenis_1')
+    let two = document.getElementById('snieguma_limenis_2')
+    let three = document.getElementById('snieguma_limenis_3')
+    let four = document.getElementById('snieguma_limenis_4')
+   
     const atbilde = await fetch('/skolotajs_snieguma/post/dati', {
         method: 'POST',
         headers: {
                 'Content-Type': 'application/json'
         },
-        body: JSON.stringify({ "Kriterijs": kriterijs, "pirmais":viens,"otrais": divi, "tresais": tris, "ceturtais": cetri })
+        body: JSON.stringify({ "prasmes": criteria.value, "snieguma_limenis_1":one.value,"snieguma_limenis_2": two.value, "snieguma_limenis_3": three.value, "snieguma_limenis_4": four.value })
     });
-
-  sanemtDatus()
-
+    criteria.value = ''
+    one.value = ''
+    two.value = ''
+    three.value = ''
+    four.value = ''
+    sanemtDatus()
 }
-
 
 async function sanemtDatus(){
     const atbilde = await fetch('/api/v1/prasmes')

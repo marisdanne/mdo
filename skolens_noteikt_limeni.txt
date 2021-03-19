@@ -3,3 +3,4 @@
 {"Kriterijs": "Reizin\u0101\u0161anas tabula", "pirmais": "Prot tikai ar atg\u0101dni", "otrais": "Prot, bet aizmirst da\u017eus gad\u012bjumus", "tresais": "Prot izmantot standartsitu\u0101cij\u0101s", "ceturtais": "Prot izmantot gan standartsitu\u0101cij\u0101s, gan nestandartsitu\u0101cij\u0101s"}
 {"Kriterijs": "Racion\u0101lu skait\u013cu saskait\u012b\u0161ana un at\u0146em\u0161ana", "pirmais": "Prot tikai ar skolot\u0101ja pal\u012bdz\u012bbu", "otrais": "Prot ar nelielu skolot\u0101ja iesaist\u012b\u0161anos", "tresais": "Prot atrisin\u0101t patst\u0101v\u012bgi", "ceturtais": "Prot atrisin\u0101t nestandarta uzdevumus"}
 {"Kriterijs": "Darbs", "pirmais": "Mans", "otrais": "Tavs", "tresais": "M\u016bsu", "ceturtais": "J\u016bsu"}
+{"prasmes": "Skola", "snieguma_limenis_1": "mana", "snieguma_limenis_2": "tava", "snieguma_limenis_3": "j\u016bsu", "snieguma_limenis_4": "m\u016bsu"}
