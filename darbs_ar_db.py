@@ -69,10 +69,7 @@ def pieteikties(lietotajvards, parole):
 def atlasit_prasmes():
     data = atlasit(f"SELECT * FROM prasmes")
     kolonnas = ['id','prasme','snieguma_limenis_1', 'snieguma_limenis_2', 'snieguma_limenis_3', 'snieguma_limenis_4','temati_id']
-    jsonData = kolonnas_json(data, kolonnas)
-    msg = "Ieraksti veiksmīgi saņemti un apstrādāti"
-    print(msg)
-    return jsonData    
+    return kolonnas_json(data, kolonnas)   
 
 def pievienot_prasmi(dati):
     vaicajums = f"INSERT INTO prasmes (prasme, snieguma_limenis_1, snieguma_limenis_2, snieguma_limenis_3, snieguma_limenis_4, temati_id)"\

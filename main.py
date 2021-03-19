@@ -85,30 +85,28 @@ def izvelneskolotajs():
     return render_template('izvelne_skolotajs.html')
 
 
-@app.route('/skolens')
-def skolens():
-    return render_template('skolens_noteikt_limeni.html')
+@app.route('/prasmju_limenis')
+def prasmju_limenis():
+    return render_template('prasmju_limenis.html')
 
 
-@app.route('/skolotajs_snieguma_apraksts')
-def skolotajs_snieguma_apraksts():
-    return render_template('skolotajs_snieguma_apraksts.html')
 
-@app.route('/skolenu_sniegums/get')
-def skolenu_sniegums_get():
-    dati = nolasitDatus('skolens_noteikt_limeni.txt')
-    return render_template('skolenu_sniegums_get.html', dati = dati)  
-  #  return json.dumps(dati)
+
+# @app.route('prasmju_limenis')
+# def prasmju_limenis():
+#     #dati = nolasitDatus('skolens_noteikt_limeni.txt')
+#     # return render_template('prasmju_limenis.html', dati = dati)  
+#   return atlasit_prasmes()
   
-@app.route('/skolenu_sniegums/post')
-def skolenu_sniegums_post():
-    return render_template('skolenu_sniegums_post.html') 
+# @app.route('/prasmju')
+# def skolenu_sniegums_post():
+#     return render_template('skolenu_sniegums_post.html') 
 
-@app.route('/skolenu_sniegums/post', methods=['POST'])
-def skolenu_sniegums_post_dati():
-    dati = request.json
-    ierakstitDatus('skolens_noteikt_limeni.txt', json.dumps(dati))
-    return "1"
+# @app.route('/skolenu_sniegums/post', methods=['POST'])
+# def skolenu_sniegums_post_dati():
+#     dati = request.json
+#     ierakstitDatus('skolens_noteikt_limeni.txt', json.dumps(dati))
+#     return "1"
 
 @app.route('/prasmes')
 def prasmes():

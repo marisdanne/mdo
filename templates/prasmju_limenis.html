@@ -58,22 +58,16 @@
       <table id="snieguma_limenu_tabula" >
         <thead >
           <tr>
-            <th id="Kriterijs"><h3>Kritērijs</h3></th>
-            <th id="pirmais"><p><h3>1</p> <p>Gatava instrukcija</p></h3></th>
-            <th id="otrais"><p><h3>2</p> <p>Spēja rīkoties ar nelielu palīdzību</p></h3></th>
-            <th id="tresais"> <p><h3>3</p> <p> Spēja rīkoties patstāvīgi</p></h3></th>
-            <th id="ceturtais"> <p><h3>4</p> <p>Prognozē rezultātu, spēja skaidrot rīcības</p></h3> </th>
+            <th id="prasmes"><h3>Kritērijs</h3></th>
+            <th id="snieguma_limenis_1"><p><h3>1</p> <p>Gatava instrukcija</p></h3></th>
+            <th id="snieguma_limenis_2"><p><h3>2</p> <p>Spēja rīkoties ar nelielu palīdzību</p></h3></th>
+            <th id="snieguma_limenis_3"> <p><h3>3</p> <p> Spēja rīkoties patstāvīgi</p></h3></th>
+            <th id="snieguma_limenis_4"> <p><h3>4</p> <p>Prognozē rezultātu, spēja skaidrot rīcības</p></h3> </th>
           </tr>
         </thead>
 
-        <tbody  >
-          {% for rinda in dati %}
-          <tr class= "Kritērijs">
-          {% for key, value in rinda.items() %}
-            <td onClick = "this.bgColor='yellow'"> {{ value }} </td>
-          {% endfor %}
-          </tr>
-          {% endfor %}
+        <tbody id="prasmju_tabula" >
+
           
         </tbody>
       </table>
@@ -92,5 +86,6 @@
     </footer>
     <script src='/static/js/saglabat.js'></script>
     <script src="/static/js/skolens_tabula.js"></script>
+    <script src="/static/js/skolenu_sniegums.js"></script>
   </body>
 </html>
