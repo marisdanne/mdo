@@ -38,7 +38,7 @@ async function sutitDatus(){
 
 
 async function sanemtDatus(){
-    const atbilde = await fetch('/skolotajs_snieguma/get')
+    const atbilde = await fetch('/api/v1/prasmes')
     const datuObjekts = await atbilde.json()
     console.log(datuObjekts)
     let tabula = document.getElementById('snieguma_limenu_tabula')
@@ -52,11 +52,12 @@ async function sanemtDatus(){
        let suna4=rinda.insertCell(3)
        let suna5=rinda.insertCell(4)
        let suna6= rinda.insertCell(5)
-       suna1.innerHTML = dati.Kriterijs
-       suna2.innerHTML = dati.pirmais
-       suna3.innerHTML = dati.otrais
-       suna4.innerHTML = dati.tresais
-       suna5.innerHTML = dati.ceturtais
+       console.log(dati)
+       suna1.innerHTML = dati.prasme
+       suna2.innerHTML = dati.snieguma_limenis_1
+       suna3.innerHTML = dati.snieguma_limenis_2
+       suna4.innerHTML = dati.snieguma_limenis_3
+       suna5.innerHTML = dati.snieguma_limenis_4
        suna6.innerHTML= `<button onclick="dzestKriteriju(this)">Dzēst</button>
       <button onclick="LabotKriteriju()">Labot</button>`
       // tabulaDatiem.innerHTML =innerHTML =tabulaDatiem.innerHTML+"<p>" + rinda.Kriterijs +  rinda.pirmais  + rinda.otrais  + rinda.tresais  + rinda.ceturtais+ "</p>"

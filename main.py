@@ -110,9 +110,9 @@ def skolenu_sniegums_post_dati():
     ierakstitDatus('skolens_noteikt_limeni.txt', json.dumps(dati))
     return "1"
 
-@app.route('/skolotajs_snieguma/post')
-def skolotajs_snieguma_post():
-    return render_template('skolotajs_snieguma_post.html')
+@app.route('/prasmes')
+def prasmes():
+    return render_template('prasmes.html')
 
 @app.route('/skolotajs_snieguma/post/dati', methods=['POST'])
 def skolotajs_snieguma_post_dati():
@@ -121,7 +121,7 @@ def skolotajs_snieguma_post_dati():
     return "1"
 
 @app.route('/api/v1/prasmes')
-def prasmes():
+def prasmes_api():
     return atlasit_prasmes()
     
 app.run(debug=True)
