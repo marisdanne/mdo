@@ -2,7 +2,7 @@ from flask import Flask, render_template, jsonify, request, redirect
 import json
 import sqlite3
 from darbs_ar_failu import nolasitDatus, ierakstitDatus
-from darbs_ar_db import registret, atlasit, lietotaji, pieteikties, nolasit, atlasit_lietotajus
+from darbs_ar_db import registret, atlasit, lietotaji, pieteikties, atlasit_lietotajus, atlasit_prasmes
 
 app = Flask(__name__)
 
@@ -15,6 +15,13 @@ def home():
 def users():
     return render_template('registracija.html')
 
+@app.route('/api/registracija', methods=['POST'])
+def api_registracija():
+    dati = request.json
+    registret(dati)
+    
+    return "1"
+
 @app.route('/skoleni')
 def skoleni():
     return render_template('admin_skolenu_saraksts.html')
@@ -22,41 +29,6 @@ def skoleni():
 @app.route('/api/v1/skoleni')
 def apiskoleni():
     return atlasit_lietotajus('Skolēns')
-
-@app.route('/api/v2/skoleni', methods=['GET'])
-def v2skoleni():
-    try:
-      # Izveidojam savienojumu ar Datubāzi
-      with sqlite3.connect("mdo.db") as conn:
-        # Izveidojam kursoru
-        c = conn.cursor()
-        # Izsaucam datu no Inventars tabulas. DAUDZUMS paņemam kā tukšu kolonu, lai rezultātos nebūtu Undefied
-        c.execute("SELECT id, vards, uzvards, klase FROM lietotaji  WHERE loma= 'Skolēns'" )
-        # Ielasam datus mainīgajā
-        data = c.fetchall()
-        jsonData = ''
-        # Kolonu nosaukumi, kādi tiks izmantoti JSON failā. Tiem ir jābūt tādā pašā secībā, kā kolonas lasām no tabulas SELECT izsaukumā
-        column_names = ['id','vards','uzvards','klase']
-        for row in data:
-          # Savienojam kolonu nosaukums ar datiem no tabulas
-          info = dict(zip(column_names, row))
-          # Pa vienai rindiņai papildimām jsonData mainīgo, līdz visi dati ir nolasīti no tabulas. Aiz katra ieraksta pieliekam komatu, lai atdalītu ierakstus.
-          jsonData = jsonData + json.dumps(info) + ','
-        # Noņemam pēdējo lieko komatu
-        jsonData = jsonData[:-1]
-        # Ieliekam visus datus kvadrātiekavās
-        jsonData = '[' + jsonData + ']'
-        msg = "Ieraksti veiksmīgi saņemti un apstrādāti"
-        print(msg)
-    except:
-      conn.rollback()
-      msg = "Ir notikusi kļūda datu saņemšanā un apstrādāšanā"
-      print(msg)
-    finally:
-      conn.commit()
-      c.close()
-      conn.close()    
-      return jsonData
 
 @app.route('/skolotaji')
 def skolotaji():
@@ -122,23 +94,6 @@ def skolens():
 def skolotajs_snieguma_apraksts():
     return render_template('skolotajs_snieguma_apraksts.html')
 
-
-@app.route('/maris/test/get')
-def maris_test_get():
-    dati = nolasitDatus('maris.txt')
-    return json.dumps(dati)
-
-@app.route('/maris/test/post')
-def maris_test_post():
-    return render_template('maris_test_post.html') 
-
-@app.route('/maris/test/post/dati', methods=['POST'])
-def maris_test_post_dati():
-    dati = request.json
-    
-    ierakstitDatus('maris.txt', json.dumps(dati))
-
-    return "1"
 @app.route('/skolenu_sniegums/get')
 def skolenu_sniegums_get():
     dati = nolasitDatus('skolens_noteikt_limeni.txt')
@@ -152,10 +107,9 @@ def skolenu_sniegums_post():
 @app.route('/skolenu_sniegums/post', methods=['POST'])
 def skolenu_sniegums_post_dati():
     dati = request.json
-   
     ierakstitDatus('skolens_noteikt_limeni.txt', json.dumps(dati))
-
     return "1"
+
 @app.route('/skolotajs_snieguma/post')
 def skolotajs_snieguma_post():
     return render_template('skolotajs_snieguma_post.html')
@@ -163,28 +117,11 @@ def skolotajs_snieguma_post():
 @app.route('/skolotajs_snieguma/post/dati', methods=['POST'])
 def skolotajs_snieguma_post_dati():
     dati = request.json
-   
     ierakstitDatus('skolens_noteikt_limeni.txt', json.dumps(dati))
-
-    return "1"
-# @app.route('/skolotajs_snieguma/get')
-# def skolotajs_snieguma_get():
-#     dati = nolasitDatus('skolens_noteikt_limeni.txt')
-#     return json.dumps(dati)
-#   #  return render_template('skolotajs_snieguma_get.html', dati = dati) 
-
-
-@app.route('/api/registracija', methods=['POST'])
-def api_registracija():
-    dati = request.json
-    registret(dati)
-    
     return "1"
 
-@app.route('/skolotajs_snieguma/get')
-def skolotajs_snieguma_get():
-    vaicajums = "SELECT * FROM prasmes "
-    dati = nolasit(vaicajums)
-    return dati
+@app.route('/api/v1/prasmes')
+def prasmes():
+    return atlasit_prasmes()
     
 app.run(debug=True)
