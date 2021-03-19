@@ -28,7 +28,15 @@
             <input type="submit" value="Nosutīt"></p>
           </form>
   
-          <p> Tēma<input type="text" size="40"></p>
+          <p> Tēma
+            <select id = "temati" onchange="sanemt_tematu()">
+              <option value="0">Izvēlies tematu</option>
+              <option value="1">Līdzdalība grupas/pāra darbā</option>
+              <option value="2">Prezentē savu ideju</option>
+              <option value="3">Sadarbība</option>
+              <option value="4">Izklājlapas, funkciju grafiku konstruēšana</option>
+            </select>
+          </p>
           <div>  
           </div>
         </div>
@@ -66,10 +74,9 @@
           </tr>
         </thead>
 
-        <tbody id="prasmju_tabula" >
-
-          
+        <tbody id="prasmite">
         </tbody>
+         
       </table>
     </div>
     <span id="vertiba" font-size="24px" font-weight="600"></span> 

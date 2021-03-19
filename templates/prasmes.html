@@ -26,8 +26,16 @@
           max="2021-05-31" min="2020-09-01">
           <input type="submit" value="Nosutīt"></p>
         </form>
-
-        <p> Tēma<input type="text" size="40"></p>
+        <p> Tēma
+          <select id = "temati" onchange="sanemt_tematu()">
+            <option value="0">Izvēlies tematu</option>
+            <option value="1">Līdzdalība grupas/pāra darbā</option>
+            <option value="2">Prezentē savu ideju</option>
+            <option value="3">Sadarbība</option>
+            <option value="4">Izklājlapas, funkciju grafiku konstruēšana</option>
+          </select>
+        </p>
+        
         <div>  
         </div>
       </div>
@@ -66,8 +74,9 @@
           </tr>
       </thead>
 
-      <tbody>
-        
+      <tbody id="prasmite">
+      </tbody>
+      <tfoot> 
         <tr>
     <td> <input id="prasmes" type="text"></td>
     <td> <input id="snieguma_limenis_1" type="text"> </td>
@@ -78,10 +87,7 @@
     <td> <button class="buton" onclick="sutitDatus()" type="button"> Saglabāt </button> </td>
     </tr>
     
-    <script src="/static/js/skolotajs_snieguma.js">  </script>
-    <div id="tabula">
-    </div>
-    </tbody>
+  </tfoot> 
 </table>
 </div>
 
@@ -90,7 +96,7 @@
   <a href="#"  class="button">Izveidot</a>
  </footer>
 
-
+  <script src="/static/js/skolotajs_snieguma.js">  </script>
   <script src='/static/js/kriterijs.js'></script>
   <script src='/static/js/dzestKriteriju.js'></script>
   <script src='/static/js/labotKriteriju.js'></script>

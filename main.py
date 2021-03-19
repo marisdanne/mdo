@@ -1,12 +1,10 @@
 from flask import Flask, render_template, jsonify, request, redirect
-import hashlib
 import json
 import sqlite3
 from darbs_ar_failu import nolasitDatus, ierakstitDatus
 from darbs_ar_db import registret, atlasit, lietotaji, pieteikties, atlasit_lietotajus, atlasit_prasmes, pievienot_prasmi
 
 app = Flask(__name__)
-SALT = 'm@d@o'
 
 @app.route('/')
 def home():
@@ -46,9 +44,7 @@ def login():
     else:
         lietotajvards = request.form.get('lietotajvards')
         parole = request.form.get('parole')
-        parole_hash = hashlib.md5(bytes(parole + SALT, 'utf-8'))
-        parole_encode = parole_hash.hexdigest()
-        loma = pieteikties(lietotajvards, parole_encode)
+        loma = pieteikties(lietotajvards, parole)
         if loma == "Skolotājs":
             return redirect('/izvelneskolotajs')
         elif loma == "Skolēns":
@@ -69,25 +65,6 @@ def izvelneskolotajs():
 def prasmju_limenis():
     return render_template('prasmju_limenis.html')
 
-
-
-
-# @app.route('prasmju_limenis')
-# def prasmju_limenis():
-#     #dati = nolasitDatus('skolens_noteikt_limeni.txt')
-#     # return render_template('prasmju_limenis.html', dati = dati)  
-#   return atlasit_prasmes()
-  
-# @app.route('/prasmju')
-# def skolenu_sniegums_post():
-#     return render_template('skolenu_sniegums_post.html') 
-
-# @app.route('/skolenu_sniegums/post', methods=['POST'])
-# def skolenu_sniegums_post_dati():
-#     dati = request.json
-#     ierakstitDatus('skolens_noteikt_limeni.txt', json.dumps(dati))
-#     return "1"
-
 @app.route('/prasmes')
 def prasmes():
     return render_template('prasmes.html')
@@ -96,8 +73,8 @@ def prasmes():
 def prasmes_post():
     return pievienot_prasmi(request.json)
 
-@app.route('/api/v1/prasmes')
-def prasmes_api():
-    return atlasit_prasmes()
+@app.route('/api/v1/prasmes/<id>')
+def prasmes_api(id):
+    return atlasit_prasmes(id)
     
 app.run(debug=True)

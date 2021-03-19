@@ -1,4 +1,4 @@
-sanemtDatus()
+
 
 async function sutitDatus(){
     console.log ("Mēģinām sūtīt datus")
@@ -23,12 +23,15 @@ async function sutitDatus(){
     sanemtDatus()
 
 }
+function sanemt_tematu(){
+    let temats = document.getElementById("temati").value
+    sanemtDatus(temats)
+}
 
-
-async function sanemtDatus(){
-    const atbilde = await fetch('/api/v1/prasmes')
+async function sanemtDatus(id){
+    const atbilde = await fetch(`/api/v1/prasmes/${id}`)
     const datuObjekts = await atbilde.json()
-    let tabulaDatiem = document.getElementById('prasmju_tabula')
+    let tabulaDatiem = document.getElementById('prasmite')
         tabulaDatiem.innerHTML = ""
 
     for(let rinda of datuObjekts){

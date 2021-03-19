@@ -1,4 +1,3 @@
-sanemtDatus()
 
 async function sutitDatus(){
     let criteria = document.getElementById('prasmes')
@@ -6,29 +5,32 @@ async function sutitDatus(){
     let two = document.getElementById('snieguma_limenis_2')
     let three = document.getElementById('snieguma_limenis_3')
     let four = document.getElementById('snieguma_limenis_4')
-   
+    let temats = document.getElementById("temati").value
+
     const atbilde = await fetch('/prasmes', {
         method: 'POST',
         headers: {
                 'Content-Type': 'application/json'
         },
-        body: JSON.stringify({ "prasmes": criteria.value, "snieguma_limenis_1":one.value,"snieguma_limenis_2": two.value, "snieguma_limenis_3": three.value, "snieguma_limenis_4": four.value })
+        body: JSON.stringify({ "prasmes": criteria.value, "snieguma_limenis_1":one.value,"snieguma_limenis_2": two.value, "snieguma_limenis_3": three.value, "snieguma_limenis_4": four.value, "temati_id":temats})
     });
     criteria.value = ''
     one.value = ''
     two.value = ''
     three.value = ''
     four.value = ''
-    sanemtDatus()
+    sanemtDatus(temats)
 }
 
-async function sanemtDatus(){
-    const atbilde = await fetch('/api/v1/prasmes')
+async function sanemtDatus(id){
+    let tabula = document.getElementById('prasmite')
+    tabula.innerHTML = ""
+    const atbilde = await fetch(`/api/v1/prasmes/${id}`)
     const datuObjekts = await atbilde.json()
-    let tabula = document.getElementById('snieguma_limenu_tabula')
+
     
     for(let dati of datuObjekts){
-       let rinda = tabula.insertRow(1)
+       let rinda = tabula.insertRow(0)
        let suna1=rinda.insertCell(0)
        let suna2=rinda.insertCell(1)
        let suna3=rinda.insertCell(2)
@@ -47,3 +49,7 @@ async function sanemtDatus(){
     }
     
 } 
+function sanemt_tematu(){
+    let temats = document.getElementById("temati").value
+    sanemtDatus(temats)
+}

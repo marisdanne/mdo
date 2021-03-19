@@ -1,5 +1,6 @@
 import sqlite3
 import json
+import hashlib
 
 DATUBAZE = "mdo.db"
 
@@ -47,7 +48,9 @@ def atlasit(vaicajums):
         return data
 
 def registret(dati):
-    vaicajums = f"INSERT INTO lietotaji (vards, uzvards, loma, klase, lietotajvards, parole) VALUES ('{dati['vards']}', '{dati['uzvards']}', '{dati['loma']}', '{dati['klase']}', '{dati['lietotajs']}', '{dati['parole']}')"
+    parole = paroles_sifresana(dati["parole"])
+    vaicajums = f"INSERT INTO lietotaji (vards, uzvards, loma, klase, lietotajvards, parole) VALUES ('{dati['vards']}', '{dati['uzvards']}', '{dati['loma']}', '{dati['klase']}', '{dati['lietotajs']}', '{parole}')"
+    
     return ievietot(vaicajums)
 
 def lietotaji():
@@ -56,7 +59,8 @@ def lietotaji():
     return dati
 
 def pieteikties(lietotajvards, parole):
-    vaicajums= f"SELECT loma FROM lietotaji WHERE lietotajvards = '{lietotajvards}' AND parole = '{parole}'"
+    parole = paroles_sifresana(parole)
+    vaicajums = f"SELECT loma FROM lietotaji WHERE lietotajvards = '{lietotajvards}' AND parole = '{parole}'"
     savienojums = sqlite3.connect(DATUBAZE)
     dati = savienojums.execute(vaicajums).fetchall()
     savienojums.commit()
@@ -66,12 +70,18 @@ def pieteikties(lietotajvards, parole):
     else:
         return False
 
-def atlasit_prasmes():
-    data = atlasit(f"SELECT * FROM prasmes")
+def atlasit_prasmes(id):
+    data = atlasit(f"SELECT * FROM prasmes WHERE temati_id = '{id}' ")
     kolonnas = ['id','prasme','snieguma_limenis_1', 'snieguma_limenis_2', 'snieguma_limenis_3', 'snieguma_limenis_4','temati_id']
     return kolonnas_json(data, kolonnas)   
 
 def pievienot_prasmi(dati):
     vaicajums = f"INSERT INTO prasmes (prasme, snieguma_limenis_1, snieguma_limenis_2, snieguma_limenis_3, snieguma_limenis_4, temati_id)"\
-        f"VALUES ('{dati['prasmes']}', '{dati['snieguma_limenis_1']}', '{dati['snieguma_limenis_2']}', '{dati['snieguma_limenis_3']}', '{dati['snieguma_limenis_4']}', 1)"
+        f"VALUES ('{dati['prasmes']}', '{dati['snieguma_limenis_1']}', '{dati['snieguma_limenis_2']}', '{dati['snieguma_limenis_3']}', '{dati['snieguma_limenis_4']}', {dati['temati_id']})"
     return ievietot(vaicajums)
+
+def paroles_sifresana(parole):
+    SALT = 'm@d@o'
+    parole_hash = hashlib.md5(bytes(parole + SALT, 'utf-8'))
+    parole_encode = parole_hash.hexdigest()
+    return parole_encode
