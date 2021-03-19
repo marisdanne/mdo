@@ -2,7 +2,7 @@ from flask import Flask, render_template, jsonify, request, redirect
 import json
 import sqlite3
 from darbs_ar_failu import nolasitDatus, ierakstitDatus
-from darbs_ar_db import registret, atlasit, lietotaji, pieteikties
+from darbs_ar_db import registret, atlasit, lietotaji, pieteikties, nolasit, atlasit_lietotajus
 
 app = Flask(__name__)
 
@@ -17,18 +17,11 @@ def users():
 
 @app.route('/skoleni')
 def skoleni():
-    
     return render_template('admin_skolenu_saraksts.html')
 
 @app.route('/api/v1/skoleni')
 def apiskoleni():
-    
-    
-    dati = atlasit("SELECT * FROM lietotaji WHERE loma = 'Skolēns'")
-    print(dati)
-   
-   
-    return dati
+    return atlasit_lietotajus('Skolēns')
 
 @app.route('/api/v2/skoleni', methods=['GET'])
 def v2skoleni():
@@ -71,17 +64,7 @@ def skolotaji():
 
 @app.route('/api/v1/skolotaji')
 def api_skolotaji():
-    dati = atlasit("SELECT * FROM lietotaji WHERE loma = 'Skolotājs'")
-    print(dati)
-    return dati
-
-
-
-@app.route('/maris')
-def maris():
-    return "<h1>Tu atradi Māri!!!!!!</h1>"
-
-
+    return atlasit_lietotajus('Skolotājs')
 
 @app.route('/login', methods=['POST','GET'])
 def login():
@@ -184,11 +167,11 @@ def skolotajs_snieguma_post_dati():
     ierakstitDatus('skolens_noteikt_limeni.txt', json.dumps(dati))
 
     return "1"
-@app.route('/skolotajs_snieguma/get')
-def skolotajs_snieguma_get():
-    dati = nolasitDatus('skolens_noteikt_limeni.txt')
-    return json.dumps(dati)
-  #  return render_template('skolotajs_snieguma_get.html', dati = dati) 
+# @app.route('/skolotajs_snieguma/get')
+# def skolotajs_snieguma_get():
+#     dati = nolasitDatus('skolens_noteikt_limeni.txt')
+#     return json.dumps(dati)
+#   #  return render_template('skolotajs_snieguma_get.html', dati = dati) 
 
 
 @app.route('/api/registracija', methods=['POST'])
@@ -198,5 +181,10 @@ def api_registracija():
     
     return "1"
 
+@app.route('/skolotajs_snieguma/get')
+def skolotajs_snieguma_get():
+    vaicajums = "SELECT * FROM prasmes "
+    dati = nolasit(vaicajums)
+    return dati
     
 app.run(debug=True)
